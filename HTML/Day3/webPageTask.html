@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebPage Task</title>
+
+    <style>
+        /* --- ASIDE LEFT SIDE --- */
+        aside {
+            background: #fafafa;
+            padding: 20px;
+            height: 90%;
+            width: 180px;
+            border-right: 3px solid #e4e4e4;
+        }
+
+
+        /* --- HEADER TOP OF THE PAGE --- */
+        header {
+            padding-bottom: 10px;
+            text-align: center;
+            background-color: rgb(143, 182, 234);
+        }
+
+        h3 {
+            color: blue;
+            text-align: center;
+            min-width: 110px;
+        }
+
+        h4 {
+            color: blue;
+        }
+
+        nav {
+            padding-top: 20px;
+            padding-bottom: 10px;
+            background-color: rgb(143, 182, 234);
+        }
+
+        a {
+            padding: 10px;
+        }
+
+        /* --- MAIN CONTENT RIGHT SIDE --- */
+        main {
+            padding: 30px;
+            background-color: azure;
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        section {
+            margin-bottom: 10px;
+        }
+
+        section:first-child {
+            display: flex;
+            gap: 20px;
+        }
+
+        article {
+            text-align: center;
+            background-color: rgb(233, 206, 53);
+            padding: 10px;
+        }
+
+
+        /* ---FOOTER BOTTOM OF THE PAGE ---*/
+        footer {
+            text-align: center;
+            background-color: rgb(12, 139, 250);
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h2 title="suren">Student Tasks (HTML Tags)</h2>
+        <nav>
+            <a href="https://en.wikipedia.org/wiki/Karur" target="_blank">Karur</a>
+            <a href="https://en.wikipedia.org/wiki/Chennai" target="_blank">Chennai</a>
+            <a href="https://en.wikipedia.org/wiki/Madurai" target="_blank">Madurai</a>
+            <a href="https://en.wikipedia.org/wiki/Tiruchirappalli" target="_blank">Trichy</a>
+            <a href="https://en.wikipedia.org/wiki/Coimbatore" target="_blank">Coimbatore</a>
+        </nav>
+    </header>
+
+    <main>
+        <div>
+            <!--ASIDE  WITH EXTRA DETAILS AND LINKS -->
+            <aside>
+                <ul>
+                    <li><a href="https://en.wikipedia.org/wiki/List_of_districts_of_Tamil_Nadu"
+                            target="_blank">Districts</a></li>
+                    <p>Click the link above to know more.</p>
+                    <li><b>Contacts</b></li>
+                    <p>call <strong>9876543210</strong> for emergency.</p>
+                    <li><a href="https://www.mapsofindia.com/maps/tamilnadu/" target="_blank">Maps</a></li>
+                    <p>Click the link above to know more.</p>
+                </ul>
+            </aside>
+        </div>
+
+        <!-- SECTION 1  CONTAINS TWO  ARTICLE -->
+        <div>
+            <section>
+                <article>
+                    <h3><a href="https://en.wikipedia.org/wiki/Karur" target="_blank">Karur</a></h3>
+                    <p>It is located on the banks of the rivers <strong>Amaravathi</strong>,<strong>Kaveri</strong>
+                        and <strong>Noyyal</strong>. It is situated about 395 km southwest of Chennai.</p>
+                </article>
+
+                <article>
+                    <h3><a href="https://en.wikipedia.org/wiki/Tiruchirappalli" target="_blank">Trichy</a></h3>
+                    <p> It is the <strong>Fourth largest urban</strong> agglomeration in the state. Tiruchirappalli
+                        sits almost at the <Strong>geographic centre</Strong> of Tamil Nadu. </p>
+                </article>
+            </section>
+
+            <!-- SECTION 2 -->
+            <section>
+                <article>
+                    <h3><strong><em>Benefits Of Semantic Tags</em></strong></h3>
+                    <p>improved accessibility for screen readers and assistive technologies, better search engine
+                        optimization (SEO) for higher rankings, and cleaner, more maintainable code that is easier for
+                        developers to read and update. These tags convey the meaning of content to browsers and search
+                        engines, <strong>making websites more user-friendly</strong> and structurally sound for both
+                        humans and machines. </p>
+                </article>
+
+            </section>
+            <!-- SECTION 3-->
+            <section>
+                <article>
+                    <h3><strong><em> Semantic Tags vs Div tags</em></strong></h3>
+                    <h4><em>Semantic Tags</em></h4>
+                    <p>Improves SEO, Helps screen readers (accessibility), Makes code cleaner and easier to read</p>
+                    <h4><em>Div Tags</em></h4>
+                    <p>content has no specific semantic meaning,you need layout (grid, flexbox),you need to group items
+                        only for styling</p>
+                </article>
+            </section>
+        </div>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2025 My Website. All Rights Reserved.</p>
+    </footer>
+
+</body>
+
+</html>
