@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+</head>
+
+<body>
+    <h2>Contact Form </h2>
+    <form>
+        <!--Name  for contact form-->
+        <label>Name</label>
+        <input type="text" name="Name" placeholder="Enter your Name"><br><br>
+        <!--Email for Contact form-->
+        <label>Email</label>
+        <input type="email" name="Email" placeholder="Enter your Name"><br><br>
+        <label>Subject:</label>
+        <!--DropDown for contact form-->
+        <select name="subject" required>
+            <option value="">-- Select Subject --</option><!--initially visible select option-->
+            <option value="General Inquiry">General Inquiry</option>
+            <option value="Technical Support">Technical Support</option>
+            <option value="Feedback">Feedback</option>
+            <option value="Complaint">Complaint</option>
+        </select>
+        <br><br>
+        <!--Message with Textarea for contact form-->
+        <label>Message</label>
+        <textarea id="Message" name="Message" placeholder="Enter your message"></textarea><br><br>
+        <button type="submit">Done</button>
+    </form>
+</body>
+
+</html>
