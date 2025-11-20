@@ -1,0 +1,28 @@
+#header{
+    color:chocolate;
+    background-color:lightyellow;
+    text-align: center;
+    padding: 5px;
+}
+
+.highlight{
+    color:bisque;
+    background-color:darkgrey;
+    padding: 1px;
+}
+
+.box{
+    color: blue;
+    background-color:darkgoldenrod;
+    padding: 1px; 
+}
+
+p{
+    color: black;
+}
+
+.footer{
+    color:white;
+    background-color: blue;
+    text-align: center;
+}

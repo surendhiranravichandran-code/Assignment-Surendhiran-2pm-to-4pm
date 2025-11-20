@@ -1,0 +1,21 @@
+input {
+    padding: 10px;
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+input[type="text"] {
+    border: blue solid 2px;
+    background-color: rgb(194, 191, 231);
+}
+
+input[type="password"]{
+    border: red solid 2px;
+    background-color: rgb(255, 213, 213);
+}
+
+button{
+    color: black;
+    background-color:gray;
+}
+

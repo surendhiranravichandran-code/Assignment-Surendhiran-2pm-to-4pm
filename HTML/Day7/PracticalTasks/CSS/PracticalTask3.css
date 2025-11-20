@@ -1,0 +1,77 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: rgb(206, 220, 220);
+    padding: 20px;
+}
+
+h2 {
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+.Container {
+    display:flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.Product {
+    background: white;
+    width: 250px;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* ATTRIBUTE SELECTORS */
+
+/* Style ALL images with alt attribute */
+img[alt] {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 2px solid #ccc;
+}
+
+/* Style ONLY primary buttons */
+button[type="buy"]{
+    background:rgb(36, 127, 231);
+    color:#ccc;
+}
+
+ /* Style ONLY secondary buttons */
+button[type="details"]{
+    background: rgba(65, 61, 61, 0.984);
+    color: #ccc;
+}
+
+/* Common button styling */
+button {
+    width:100%;
+    padding:10px;
+    margin-top:10px;
+    border:none;
+    border-radius:6px;
+    cursor:pointer;
+    font-size:16px;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+.price{
+    margin: 10px 0;
+    font-size: 18px;
+    color:greenyellow;
+    font-weight: bold;
+}

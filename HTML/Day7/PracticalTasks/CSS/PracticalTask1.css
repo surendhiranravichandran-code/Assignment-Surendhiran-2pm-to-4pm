@@ -1,0 +1,68 @@
+
+ /* Reset default spacing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: #f3f3f3;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ /* Login card */
+.Login {
+    background: #fff;
+    padding: 25px;
+    width: 320px;
+    border-radius: 10px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.15);
+}
+
+.Login h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+
+
+/* Styled input fields */
+.Login input {
+    width: 100%;
+    padding: 12px;
+    margin-top: 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    transition: 0.2s;
+}
+
+ /* Focus effect */
+.Login input:focus {
+    border-color: #007bff;
+    outline: none;
+    background-color: #eef6ff;
+}
+
+/* Submit button */
+.Login button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 18px;
+    font-size: 17px;
+    background: #2683e6;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.Login button:hover {
+    background: #1ba5ba;
+}
