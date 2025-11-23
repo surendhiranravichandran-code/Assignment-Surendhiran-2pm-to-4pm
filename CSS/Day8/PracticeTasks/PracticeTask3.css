@@ -1,0 +1,22 @@
+*{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.box-A{
+    width: 200px;
+    height: 200px;
+    padding-right: 40px;
+    padding-left: 20px;
+    border: 5px solid black;
+    background-color: aquamarine;
+    margin-bottom: 10px;
+}
+
+.box-B{
+    width: 200px;
+    height: 200px;
+    padding-right: 80px;
+    padding-left: 40px;
+    border: 5px solid black;
+    background-color:cornflowerblue;
+}

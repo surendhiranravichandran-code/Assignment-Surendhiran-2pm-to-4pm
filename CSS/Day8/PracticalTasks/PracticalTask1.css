@@ -1,0 +1,33 @@
+*{
+    font-family:'Times New Roman', Times, serif;
+}
+
+.profile{
+    height: 250px;
+    width:300px;
+    padding: 5px;
+    margin-left: 550px;
+    margin-top: 100px;
+    text-align: center;
+    box-sizing: border-box;
+    border-radius: 10px;
+    border: 2px solid lightgrey;
+}
+
+img{
+    width: 100px;
+    height: 100px;
+    margin-bottom: 50px;
+    border-radius: 50%;
+    
+}
+
+img h2{
+    margin:10px 0 5px;
+    
+}
+
+img p{
+    margin: 5px 0;
+    color: slategray;
+}

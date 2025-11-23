@@ -1,0 +1,39 @@
+ * {
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: Arial, sans-serif;
+    background: #6eabe9;
+    padding: 30px;
+  }
+
+  h2 {
+    margin-bottom: 20px;
+  }
+
+  /* Grid container */
+  .grid {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  /* Each box */
+  .box {
+    width: 250px;      /* stays true even with padding/border */
+    margin: 12px;
+    padding: 20px;      /* will not increase total size */
+    background: rgb(239, 68, 68);
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+  }
+
+  .box h3 {
+    margin-top: 0;
+    color: bisque;
+  }
+
+  .box p {
+    color: #0c0505;
+  }

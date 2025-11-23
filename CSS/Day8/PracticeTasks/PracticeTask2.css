@@ -1,0 +1,25 @@
+*{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.Right{
+    width: 200px;
+    height: 200px;
+    margin: 80px;
+    padding: 20px;
+    border: 5px solid red;
+    background-color: burlywood;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.Left{
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+    padding: 20px;
+    border: 5px solid green;
+    background-color: burlywood;
+    text-align: center;
+    box-sizing: border-box;
+}
