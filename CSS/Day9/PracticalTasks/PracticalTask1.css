@@ -1,0 +1,45 @@
+.pricing-section {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    justify-content: center;
+}
+
+.pricing-card {
+    flex: 1;
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.pricing-card h2 {
+    margin-bottom: 10px;
+}
+
+.pricing-card p{
+    margin-bottom: 20px;
+}
+
+.pricing-card button {
+    padding: 10px 20px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.pricing-card button:hover {
+    background: #0056b3;
+}
+
+/* ----------------------- */
+/* RESPONSIVE: 3 → 1 column */
+/* ----------------------- */
+@media (max-width: 600px) {
+    .pricing-section {
+        flex-direction: column;
+    }
+}

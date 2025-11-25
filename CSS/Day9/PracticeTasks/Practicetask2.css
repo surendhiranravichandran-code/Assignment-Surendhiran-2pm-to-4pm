@@ -1,0 +1,68 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: system-ui, Arial, sans-serif;
+    padding: 20px;
+    background: #f6f7fb;
+}
+
+.cards {
+    display: flex;
+    height: 300px;
+    width: 100%;
+    background-color: antiquewhite;
+    gap: 20px;
+    /* 20px gap between cards */
+    padding: 20px;
+    /* optional padding around the row */
+    align-items: stretch;
+    /* stretch cards vertically to full height */
+}
+
+.card {
+    flex: 1;
+    /* equal width */
+    min-width: 0;
+    /* IMPORTANT: allow cards to shrink (prevents overflow) */
+    display: flex;
+    align-items: center;
+    /* vertical center of content */
+    justify-content: center;
+    /* horizontal center of content */
+    border: 2px solid #ccc;
+    /* visible border */
+    background-color: aliceblue;
+    color: #333;
+    border-radius: 8px;
+    padding: 16px;
+    text-align: center;
+}
+
+/* make the content obvious */
+.card h2 {
+    margin: 0 0 8px 0;
+    font-size: 18px;
+}
+
+.card p {
+    margin: 0;
+    font-size: 14px;
+    color: #444;
+    opacity: 0.9;
+}
+
+/* responsive fallback for very narrow screens */
+@media (max-width: 480px) {
+    .cards {
+        flex-direction: column;
+        gap: 12px;
+        height: auto;
+    }
+
+    .card {
+        width: 100%;
+    }
+}
