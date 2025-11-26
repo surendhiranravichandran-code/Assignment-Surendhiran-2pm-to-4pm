@@ -1,0 +1,22 @@
+*{
+    background-color: #cfe578;
+}
+.para-style{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+    font-weight: lighter;
+    font-display: unset;
+    line-height: 1.5;
+    letter-spacing: 0.5px;
+    color:rgb(124, 11, 237);
+    word-spacing: 2px;
+    margin: 20px 0;
+    padding: 10px 15px;
+}
+
+h2{
+    text-align: center;
+    color: red;
+    font-size: 30px;
+    font-family: 'Times New Roman', Times, serif;
+}

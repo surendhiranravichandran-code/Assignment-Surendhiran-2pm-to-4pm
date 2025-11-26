@@ -1,0 +1,25 @@
+.notify-container {
+    position: relative;      /* Parent container */
+    display: inline-block;
+}
+
+.profile-btn {
+    padding: 12px 20px;
+    font-size: 16px;
+    background: #03604f;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.dot-badge {
+    position: absolute;
+    top: 4px;                /* adjust position */
+    right: 4px;
+    width: 12px;
+    height: 12px;
+    background: #ff2b2b;
+    border-radius: 50%;      /* Perfect circular dot */
+    border: 2px solid rgb(18, 17, 17); /* Clean outline */
+}

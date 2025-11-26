@@ -1,0 +1,148 @@
+/* ------------------ BASIC RESET & FONT ------------------ */
+body {
+    margin: 0;
+    font-family: "Poppins", Arial, sans-serif;
+    line-height: 1.6;
+    background: #ffffff;
+}
+
+/* ------------------ STICKY NAVBAR ------------------ */
+nav {
+    position: sticky;
+    top: 0;
+    background: #fff;
+    z-index: 999;
+    padding: 10px 0;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* FLEX NAVIGATION */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #222;
+}
+
+/* ------------------ HERO SECTION (GRADIENT) ------------------ */
+.hero-gradient {
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    padding: 60px 20px;
+    text-align: center;
+    color: white;
+    border-radius: 10px;
+    margin: 20px auto;
+    width: 90%;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    z-index: 2;
+    position: relative;
+}
+
+.hero-gradient h1 {
+    font-size: 45px;
+    text-shadow: 2px 3px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* ------------------ HEADER SECTION ------------------ */
+header {
+    text-align: center;
+    padding: 20px;
+    background: #f8f8f8;
+}
+
+/* FLEX ABOUT VIDEO SECTION */
+header section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+/* ------------------ MAIN CONTENT ------------------ */
+main {
+    width: 90%;
+    margin: auto;
+    padding: 20px 0;
+}
+
+/* ------------------ BACKGROUND IMAGE FOR PROJECT SECTION ------------------ */
+.project-section {
+    background: url("/images/image.png") center/cover no-repeat;
+    padding: 30px;
+    color: rgb(10, 10, 9);
+    border-radius: 10px;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.project-section h2,
+.project-section h3 {
+    text-shadow: 2px 3px 6px rgba(0, 0, 0, 0.8);
+}
+
+/* ------------------ TEXT SHADOW FOR ALL TITLES ------------------ */
+h2,
+h3,
+h4 {
+    text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.2);
+}
+
+/* ------------------ FLEX CONTACT FORM ------------------ */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-width: 400px;
+}
+
+input,
+textarea {
+    padding: 8px;
+    width: 100%;
+}
+
+button {
+    padding: 10px;
+    width: 150px;
+    background: #222;
+    color: white;
+    border: none;
+}
+
+/* ------------------ FIX NESTED LISTS ------------------ */
+ul {
+    margin-left: 20px;
+}
+
+/* ------------------ MEDIA HERO ------------------ */
+.hero-1 {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    background: #fafafa;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.hero-1 .content {
+    flex: 1;
+}
+
+.hero-1 .media {
+    width: 420px;
+    flex: 0 0 auto;
+}
+
+/* ------------------ TABLE CENTERING ------------------ */
+table {
+    margin-top: 10px;
+}

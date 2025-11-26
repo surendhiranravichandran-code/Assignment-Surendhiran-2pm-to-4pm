@@ -1,0 +1,26 @@
+.nav-sticky {
+    position: sticky;                         /* Makes navbar stick */
+    top: 0;                                  /* Sticks to the top */
+    background: rgb(61, 59, 59);
+    padding: 15px 20px;
+    z-index: 1000;                            /* Keeps navbar above other elements */
+}
+
+.nav-sticky ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.nav-sticky a {
+    color: white;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+}
+
+.nav-sticky a:hover {
+    text-decoration: underline;
+    color: blueviolet;
+}

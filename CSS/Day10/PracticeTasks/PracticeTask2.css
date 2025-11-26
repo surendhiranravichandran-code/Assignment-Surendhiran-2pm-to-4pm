@@ -1,0 +1,8 @@
+.gradient-sec{
+    padding: 50px;
+    color: rgb(251, 250, 250);
+    background:linear-gradient(#11baf8,#2ee6a8,#076dc5);
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
