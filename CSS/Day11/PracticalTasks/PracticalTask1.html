@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Inline-Block Navigation</title>
+
+    <style>
+        /* Navbar container */
+        .navbar {
+            background: #4f46e5;
+            padding: 12px 20px;
+        }
+
+        /* Remove default list styling */
+        .navbar ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            white-space: nowrap;
+            /* Keeps items in one row */
+        }
+
+        /* Inline-block nav items */
+        .navbar li {
+            display: inline-block;
+            margin-right: 20px;
+            /* spacing between items */
+        }
+
+        /* Nav links */
+        .navbar a {
+            text-decoration: none;
+            color: white;
+            font-size: 16px;
+            font-weight: 500;
+            padding: 6px 10px;
+            border-radius: 4px;
+            transition: 0.3s;
+        }
+
+        /* Hover effect */
+        .navbar a:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Projects</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+</body>
+
+</html>

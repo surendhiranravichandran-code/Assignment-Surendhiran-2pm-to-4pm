@@ -1,0 +1,197 @@
+/* ------------------ BASIC RESET & FONT ------------------ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", Arial, sans-serif;
+    line-height: 1.6;
+    background: #ffffff;
+
+    /* FULL PAGE GRID LAYOUT */
+    display: grid;
+    grid-template-areas:
+        "hero"
+        "header"
+        "main"
+        "footer";
+    grid-template-columns: 1fr;
+}
+
+/* ------------------ GRID AREA MAPPING ------------------ */
+.hero-gradient { grid-area: hero; }
+header { grid-area: header; }
+main { grid-area: main; }
+footer { grid-area: footer; }
+
+/* ------------------ STICKY NAVBAR ------------------ */
+nav {
+    position: sticky;
+    top: 0;
+    background: #fff;
+    z-index: 999;
+    padding: 10px 0;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+
+    /* FLEX UPGRADE */
+    display: flex;
+    justify-content: center;
+}
+
+/* FLEX NAVIGATION */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #222;
+}
+
+/* ------------------ HERO SECTION (GRADIENT) ------------------ */
+.hero-gradient {
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    padding: 60px 20px;
+    text-align: center;
+    color: white;
+    border-radius: 10px;
+    margin: 20px auto;
+    width: 90%;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.hero-gradient h1 {
+    font-size: 45px;
+    text-shadow: 2px 3px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* ------------------ HEADER SECTION ------------------ */
+header {
+    text-align: center;
+    padding: 20px;
+    background: #f8f8f8;
+
+    /* FLEX CENTERING */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+header section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+/* ------------------ MAIN CONTENT ------------------ */
+main {
+    width: 90%;
+    margin: auto;
+    padding: 20px 0;
+
+    /* RESPONSIVE GRID FOR SUB-SECTIONS */
+    display: grid;
+    gap: 30px;
+}
+
+/* ------------------ BACKGROUND IMAGE FOR PROJECT SECTION ------------------ */
+.project-section {
+    background: url("/images/image.png") center/cover no-repeat;
+    padding: 30px;
+    color: rgb(10, 10, 9);
+    border-radius: 10px;
+
+    /* GRID BOX */
+    display: grid;
+    gap: 10px;
+}
+
+.project-section h2,
+.project-section h3 {
+    text-shadow: 2px 3px 6px rgba(0, 0, 0, 0.8);
+}
+
+/* ------------------ TITLES SHADOW ------------------ */
+h2, h3, h4 {
+    text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.2);
+}
+
+/* ------------------ FLEX CONTACT FORM ------------------ */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-width: 400px;
+}
+
+input, textarea {
+    padding: 8px;
+    width: 100%;
+}
+
+button {
+    padding: 10px;
+    width: 150px;
+    background: #222;
+    color: white;
+    border: none;
+}
+
+/* ------------------ FIX NESTED LISTS ------------------ */
+ul {
+    margin-left: 20px;
+}
+
+/* ------------------ MEDIA HERO (FLEX + GRID MIX) ------------------ */
+.hero-1 {
+    background: #fafafa;
+    padding: 20px;
+    border-radius: 10px;
+
+    /* FLEX layout for wide screens */
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.hero-1 .content {
+    flex: 1;
+}
+
+.hero-1 .media {
+    width: 420px;
+    flex: 0 0 auto;
+}
+
+/* ------------------ CENTER TABLE ------------------ */
+table {
+    margin-top: 10px;
+    border-collapse: collapse;
+}
+
+/* ------------------ RESPONSIVE FIXES ------------------ */
+@media (max-width: 768px) {
+
+    /* HERO becomes stacked */
+    .hero-1 {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    /* Responsive project section */
+    .project-section {
+        padding: 20px;
+    }
+
+    nav ul {
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Responsive Flexbox Cards</title>
+
+<style>
+    body {
+        margin: 0;
+        padding: 20px;
+        font-family: Arial, sans-serif;
+        background: #f5f5f5;
+    }
+
+    /* Flex container */
+    .card-row {
+        display: flex;
+        gap: 20px;                /* equal spacing */
+        flex-wrap: wrap;          /* responsive rows */
+    }
+
+    /* Each card */
+    .card {
+        flex: 1;                  /* each card grows equally */
+        min-width: 250px;         /* ensures cards wrap on small screens */
+        background: white;
+        border-radius: 10px;
+        padding: 20px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    /* Card title */
+    .card h3 {
+        margin-top: 0;
+    }
+</style>
+
+</head>
+<body>
+
+    <div class="card-row">
+        <div class="card">
+            <h3>Card One</h3>
+            <p>This card expands to fill equal space.</p>
+        </div>
+
+        <div class="card">
+            <h3>Card Two</h3>
+            <p>Flexible layout without calculating width.</p>
+        </div>
+
+        <div class="card">
+            <h3>Card Three</h3>
+            <p>Automatically wraps on small screens.</p>
+        </div>
+    </div>
+
+</body>
+</html>

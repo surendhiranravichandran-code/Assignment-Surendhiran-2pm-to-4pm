@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Grid Template Areas Layout</title>
+
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+    }
+
+    /* Full-page Grid Layout */
+    .layout {
+        display: grid;
+        grid-template-areas:
+            "header header"
+            "sidebar content"
+            "footer footer";
+        grid-template-columns: 250px 1fr;
+        grid-template-rows: 80px 1fr 60px;
+        height: 100vh;
+    }
+
+    header {
+        grid-area: header;
+        background: #4f46e5;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 24px;
+    }
+
+    aside {
+        grid-area: sidebar;
+        background: #e5e7eb;
+        padding: 20px;
+        font-size: 18px;
+    }
+
+    main {
+        grid-area: content;
+        padding: 20px;
+        background: #ffffff;
+        overflow-y: auto;
+    }
+
+    footer {
+        grid-area: footer;
+        background: #111827;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+</style>
+
+</head>
+<body>
+
+<div class="layout">
+
+    <header>HEADER</header>
+
+    <aside>
+        <h3>Sidebar</h3>
+        <p>Navigation links or menu here</p>
+    </aside>
+
+    <main>
+        <h2>Main Content</h2>
+        <p>This is the main section of the page.</p>
+        <p>Add more text to test scrolling.</p>
+    </main>
+
+    <footer>FOOTER</footer>
+
+</div>
+
+</body>
+</html>

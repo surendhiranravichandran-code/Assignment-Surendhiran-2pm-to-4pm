@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Item Alignment using Align-Self</title>
+    <!--Internal CSS-->
+    <style>
+        .container{
+            display: flex;
+            height: 200px;
+            align-items: center; /* default alignment for all items */
+            background-color: aquamarine;
+            gap: 20px;
+
+        }
+        .box1,.box3{
+            padding:15px 25px;
+            background-color: aliceblue;
+            color: black;
+            border-radius: 5px;
+        }
+        .box2{
+            padding: 15px 25px;
+            align-self: flex-end;
+            background: blanchedalmond;
+            margin-bottom: 2px;
+        }
+
+    </style>
+</head>
+<body>
+    <!--Flex container with items-->
+    <div class="container">
+        <div class="box1">Item1</div>
+        <div class="box2">Special Item</div>
+        <div class="box3">Item3</div>
+    </div>
+</body>
+</html>
