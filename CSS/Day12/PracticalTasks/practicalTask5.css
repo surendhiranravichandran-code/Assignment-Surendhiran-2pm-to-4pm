@@ -1,0 +1,31 @@
+    .photo-row {
+      display: flex;
+      align-items: center;     /* Vertically center images */
+      gap: 12px;
+      padding: 12px;
+      background: #fafafa;
+      border-radius: 8px;
+    }
+
+    .photo-wrap {
+      height: 200px;           /* Fixed strip height */
+      flex: 1 1 33%;    /* <'flex-grow'> <'flex-shrink'>? || <'flex-basis'>       3 equal images */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;        /* Crop overflow */
+      border-radius: 6px;
+      background: #eee;
+    }
+
+    .photo-wrap img {
+      height: 100%;            /* Fill vertically */
+      width: auto;             /* Keep aspect ratio */
+      object-fit: cover;       /* Crop edges if needed */
+      display: block;
+    }
+
+    /* Responsive for small screens */
+    @media (max-width: 600px) {
+      .photo-wrap { height: 140px; }
+    }

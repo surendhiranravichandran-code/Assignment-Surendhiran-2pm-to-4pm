@@ -1,0 +1,22 @@
+.toolbar {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        background: #ec9494;
+        padding: 10px;
+        position: relative;
+    }
+
+    .btn-left {
+        margin-right: auto;
+    }
+
+    .btn-center {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .btn-right {
+        margin-left: auto;
+    }
