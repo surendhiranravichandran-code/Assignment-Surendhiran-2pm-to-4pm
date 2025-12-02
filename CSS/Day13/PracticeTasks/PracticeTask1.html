@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Two column Grid</title>
+  <style>
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;  /* 2 equal columns */
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .box {
+      background: #007bff;
+      color: white;
+      padding: 20px;
+      border-radius: 8px;
+      text-align: center;
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+  <div class="grid-2">
+    <div class="box">Column 1</div>
+    <div class="box">Column 2</div>
+  </div>
+
+</body>
+</html>

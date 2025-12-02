@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Grid</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .product-grid {
+            display: grid;
+            gap: 20px;
+            /* Flexible columns: grows or shrinks responsively */
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        }
+
+        .product-card {
+            background: #fff;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+            text-align: center;
+        }
+
+        .product-card img {
+            width: 100%;
+            height: 160px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .product-card h3 {
+            margin: 10px 0 5px;
+        }
+
+        .product-card p {
+            font-size: 14px;
+            color: #444;
+        }
+
+        .price {
+            margin-top: 8px;
+            font-weight: bold;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+<h2>Product Grid</h2>
+<div class="product-grid">
+    <div class="product-card">
+        <img src="https://picsum.photos/200/150?1" alt="">
+        <h3>Product 1</h3>
+        <p>Short description of product.</p>
+        <div class="price">$19.99</div>
+    </div>
+    <div class="product-card">
+        <img src="https://picsum.photos/200/150?2" alt="">
+        <h3>Product 2</h3>
+        <p>Short description of product.</p>
+        <div class="price">$29.99</div>
+    </div>
+    <div class="product-card">
+        <img src="https://picsum.photos/200/150?3" alt="">
+        <h3>Product 3</h3>
+        <p>Short description of product.</p>
+        <div class="price">$24.99</div>
+    </div>
+
+    <div class="product-card">
+        <img src="https://picsum.photos/200/150?4" alt="">
+        <h3>Product 4</h3>
+        <p>Short description of product.</p>
+        <div class="price">$39.99</div>
+    </div>
+</div>
+</body>
+</html>

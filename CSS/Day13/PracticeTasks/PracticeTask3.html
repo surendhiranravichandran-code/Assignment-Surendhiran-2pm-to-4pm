@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Span Example</title>
+
+    <style>
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .box {
+            background: lightblue;
+            padding: 20px;
+            border-radius: 6px;
+        }
+
+        .wide {
+            grid-column: span 2; /* This makes the item span across 2 columns */
+            background: lightcoral;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="box wide">Box 1 — Spans 2 Columns</div>
+        <div class="box">Box 2</div>
+        <div class="box">Box 3</div>
+    </div>
+
+</body>
+</html>

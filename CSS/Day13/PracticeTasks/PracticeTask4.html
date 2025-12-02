@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Equal Rows Grid</title>
+    <style>
+        .grid-box {
+            display: grid;
+            grid-template-rows: 100px 100px 100px;
+            /* 3 equal rows */
+            gap: 10px;
+        }
+
+        .item {
+            background: lightgreen;
+            border-radius: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="grid-box">
+        <div class="item">Row 1</div>
+        <div class="item">Row 2</div>
+        <div class="item">Row 3</div>
+    </div>
+
+</body>
+
+</html>

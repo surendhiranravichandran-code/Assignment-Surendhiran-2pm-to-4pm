@@ -1,0 +1,299 @@
+/* -----------------------------------------------------
+   GLOBAL RESET
+----------------------------------------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    line-height: 1.6;
+    background: #ffffff;
+    color: #222;
+}
+
+/* -----------------------------------------------------
+   HEADER (Grid Layout)
+----------------------------------------------------- */
+header {
+    display: grid;
+    grid-template-areas:
+        "title"
+        "subtitle"
+        "tagline";
+    text-align: center;
+    padding: 40px 20px;
+}
+
+header h1 {
+    grid-area: title;
+    font-size: 2.4rem;
+}
+
+header h4 {
+    grid-area: subtitle;
+    font-weight: 500;
+    margin-top: 5px;
+}
+
+header p {
+    grid-area: tagline;
+    max-width: 600px;
+    margin: 10px auto 0;
+}
+
+/* -----------------------------------------------------
+   HERO SECTION
+----------------------------------------------------- */
+.hero-gradient {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "hero-content";
+    padding: 50px 20px;
+    background: linear-gradient(135deg, #4e54c8, #8f94fb);
+    color: white;
+    text-align: center;
+    border-radius: 10px;
+    margin: 20px;
+}
+
+.hero-content {
+    grid-area: hero-content;
+}
+
+.hero-content h2 {
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+}
+
+/* -----------------------------------------------------
+   ABOUT SECTION (2-column Grid)
+----------------------------------------------------- */
+.about-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 20px;
+    padding: 40px 20px;
+}
+
+.about-section div {
+    background: #f7f7f7;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* -----------------------------------------------------
+   PROJECT SECTION (Responsive Grid)
+----------------------------------------------------- */
+.project-section {
+    background: url("/Images/image.png") center/cover no-repeat;
+    padding: 30px;
+    color: white;
+    border-radius: 10px;
+    margin: 40px 20px;
+}
+
+.projects-grid {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    margin-top: 20px;
+}
+
+.project-card {
+    background: rgba(0, 0, 0, 0.55);
+    padding: 20px;
+    border-radius: 10px;
+    backdrop-filter: blur(6px);
+
+    /* Flexbox INSIDE (best practice) */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* -----------------------------------------------------
+   GALLERY SECTION
+----------------------------------------------------- */
+.gallery-section {
+    padding: 30px 20px;
+}
+
+.gallery-grid {
+    display: grid;
+    gap: 15px;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+}
+
+.gallery-grid img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+/* -----------------------------------------------------
+   PRICING TABLES (Grid)
+----------------------------------------------------- */
+.pricing-section {
+    padding: 40px 20px;
+}
+
+.pricing-grid {
+    display: grid;
+    gap: 25px;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.price-card {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
+
+    /* Flexbox inside card */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+/* -----------------------------------------------------
+   DASHBOARD / STATS AREA (Grid)
+----------------------------------------------------- */
+.dashboard-section {
+    padding: 30px 20px;
+}
+
+.dashboard-grid {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.stat-box {
+    background: #eaeaea;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+/* -----------------------------------------------------
+   SERVICES SECTION
+----------------------------------------------------- */
+.services-section {
+    padding: 40px 20px;
+}
+
+.services-grid {
+    display: grid;
+    gap: 25px;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.service-card {
+    background: #f1f1f1;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* -----------------------------------------------------
+   FOOTER (Grid Template Areas)
+----------------------------------------------------- */
+footer {
+    margin-top: 50px;
+    padding: 40px 20px;
+    background: #222;
+    color: white;
+
+    display: grid;
+    grid-template-areas:
+        "f1"
+        "f2"
+        "f3";
+    gap: 20px;
+    text-align: center;
+}
+
+footer .col1 {
+    grid-area: f1;
+}
+footer .col2 {
+    grid-area: f2;
+}
+footer .col3 {
+    grid-area: f3;
+}
+
+footer p {
+    opacity: 0.75;
+}
+
+/* -----------------------------------------------------
+   BUTTONS (Flexbox Centering)
+----------------------------------------------------- */
+button {
+    padding: 10px 20px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+
+    /* Flexbox inside button */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button.primary {
+    background: #4e54c8;
+    color: white;
+}
+
+button.secondary {
+    background: #ddd;
+}
+
+/* ------------------ FIX NESTED LISTS ------------------ */
+ul {
+    margin-left: 20px;
+}
+
+/* ------------------ MEDIA HERO (FLEX + GRID MIX) ------------------ */
+.hero-1 {
+    background: #fafafa;
+    padding: 20px;
+    border-radius: 10px;
+    /* FLEX layout for wide screens */
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+.hero-1 .content {
+    flex: 1;
+}
+.hero-1 .media {
+    width: 420px;
+    flex: 0 0 auto;
+}
+/* ------------------ CENTER TABLE ------------------ */
+table {
+    margin-top: 10px;
+    border-collapse: collapse;
+}
+/* ------------------ RESPONSIVE FIXES ------------------ */
+@media (max-width: 768px) {
+    /* HERO becomes stacked */
+    .hero-1 {
+        flex-direction: column;
+        text-align: center;
+    }
+    /* Responsive project section */
+    .project-section {
+        padding: 20px;
+    }
+    nav ul {
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+}

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Layout</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* --- GRID LAYOUT --- */
+        .dashboard {
+            display: grid;
+            height: 100vh;
+            grid-template-columns: 250px 1fr;
+            grid-template-rows: 70px 1fr;
+            grid-template-areas:
+                "sidebar topbar"
+                "sidebar main";
+        }
+
+        /* Sidebar */
+        .sidebar {
+            grid-area: sidebar;
+            background: #2c3e50;
+            color: white;
+            padding: 20px;
+        }
+
+        .sidebar h2 {
+            margin-bottom: 20px;
+            font-size: 20px;
+        }
+
+        .sidebar ul {
+            padding: 0;
+            list-style: none;
+        }
+
+        .sidebar ul li {
+            margin: 12px 0;
+            cursor: pointer;
+        }
+
+        /* Topbar */
+        .topbar {
+            grid-area: topbar;
+            background: #ecf0f1;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 20px;
+            border-bottom: 1px solid #ccc;
+        }
+
+        /* Main Content */
+        .main {
+            grid-area: main;
+            padding: 20px;
+            background: #f8f9fa;
+            overflow-y: auto;
+        }
+
+        /* Stats Cards Row */
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 20px;
+            margin-bottom: 25px;
+        }
+
+        .stat-card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+            text-align: center;
+            font-size: 18px;
+        }
+
+        /* Main Content Box */
+        .content-box {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.12);
+        }
+    </style>
+</head>
+<body>
+
+<div class="dashboard">
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <h2>Dashboard</h2>
+        <ul>
+            <li>Home</li>
+            <li>Analytics</li>
+            <li>Reports</li>
+            <li>Settings</li>
+        </ul>
+    </div>
+
+    <!-- Topbar -->
+    <div class="topbar">
+        <strong>Welcome, User</strong>
+        <button>Logout</button>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main">
+
+        <!-- Stats Section -->
+        <div class="stats">
+            <div class="stat-card">Users: 1,245</div>
+            <div class="stat-card">Sales: $23K</div>
+            <div class="stat-card">Orders: 530</div>
+            <div class="stat-card">Growth: +12%</div>
+        </div>
+
+        <!-- Main Box -->
+        <div class="content-box">
+            <h2>Main Content Area</h2>
+            <p>
+                Add charts, tables, graphs, activities, recent logs,
+                or anything you want to show in your dashboard.
+            </p>
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
