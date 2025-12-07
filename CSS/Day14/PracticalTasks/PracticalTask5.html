@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Display Page</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family:'Times New Roman', Times, serif;
+            background: #f4f4f4;
+            padding: 30px;
+        }
+
+        /* PAGE WRAPPER */
+        .product-page {
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        /* TITLE */
+        .product-title {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 32px;
+            font-weight: 600;
+        }
+
+        /* PRODUCT GRID USING FLEX */
+        .product-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        /* PRODUCT CARD */
+        .product-card {
+            background: white;
+            flex: 1 1 calc(25% - 20px);  /* 4 per row */
+            border-radius: 10px;
+            padding: 15px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: 0.3s ease;
+        }
+
+        .product-card:hover {
+            transform: translateY(-3px);
+        }
+
+        .product-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .product-name {
+            margin: 10px 0 5px;
+            font-size: 20px;
+            font-weight: 600;
+        }
+
+        .product-price {
+            color: #27ae60;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .product-card button {
+            padding: 10px 15px;
+            width: 100%;
+            border: none;
+            background: #3498db;
+            color: white;
+            font-size: 16px;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        .product-card button:hover {
+            background: #2980b9;
+        }
+
+        /* RESPONSIVE BREAKPOINTS */
+        @media (max-width: 900px) {
+            .product-card {
+                flex: 1 1 calc(50% - 20px);  /* 2 per row */
+            }
+        }
+
+        @media (max-width: 600px) {
+            .product-card {
+                flex: 1 1 100%;   /* 1 per row */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="product-page">
+        <h2 class="product-title">Our Products</h2>
+        <div class="product-container">
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f" alt="">
+                <p class="product-name">Premium Headphones</p>
+                <p class="product-price">$129</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1512445239399-63de0e8f1d49" alt="">
+                <p class="product-name">Smart Watch</p>
+                <p class="product-price">$199</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1580894894513-541e068a3fdf" alt="">
+                <p class="product-name">Wireless Speaker</p>
+                <p class="product-price">$89</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1591176388339-46ef5c4ec1a9" alt="">
+                <p class="product-name">DSLR Camera</p>
+                <p class="product-price">$499</p>
+                <button>Add to Cart</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

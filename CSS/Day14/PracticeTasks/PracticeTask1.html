@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Mobile Color Box</title>
+  <style>
+    :root{
+      --box-size: 220px;
+      --desktop-color: #91bdee;   /* desktop color */
+      --mobile-color: #ff7f50;    /* mobile color */
+    }
+
+    body {
+      display: grid;
+      place-items: center;
+      height: 100vh;
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background: #0f0f0f;
+    }
+
+    .color-box {
+      width: var(--box-size);
+      height: var(--box-size);
+      background: var(--desktop-color);
+      border-radius: 12px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: rgb(251, 247, 247);
+      font-weight: 600;
+      transition: background 300ms ease, transform 200ms ease;
+    }
+
+    /* Mobile: change color (and add slight scale for visual feedback) */
+    @media (max-width: 600px) {
+      .color-box {
+        background: var(--mobile-color);
+        transform: scale(1.03);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="color-box">Resize to mobile</div>
+</body>
+</html>

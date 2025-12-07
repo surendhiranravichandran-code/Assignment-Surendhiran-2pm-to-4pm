@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Hero</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family:'Times New Roman', Times, serif;
+            background: #f5f5f5;
+        }
+
+        /* ---------- HERO SECTION ---------- */
+        .hero {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            gap: 40px;
+            padding: 60px 10%;
+            background: white;
+        }
+
+        .hero-content h1 {
+            font-size: clamp(32px, 6vw, 58px);
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 15px;
+        }
+
+        .hero-content p {
+            font-size: 18px;
+            margin-bottom: 25px;
+            color: #444;
+            max-width: 500px;
+        }
+
+        .hero-btn {
+            display: inline-block;
+            background: #007bff;
+            color: white;
+            padding: 14px 28px;
+            font-size: 16px;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: 0.3s ease;
+        }
+
+        .hero-btn:hover {
+            background: #005fcc;
+        }
+
+        .hero img {
+            width: 100%;
+            border-radius: 14px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        /* ---------- MOBILE VIEW ---------- */
+        @media (max-width: 768px) {
+            .hero {
+                grid-template-columns: 1fr;
+                text-align: center;
+                padding: 40px 8%;
+            }
+
+            .hero-content p {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .hero img {
+                margin-top: 25px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Build Something Amazing</h1>
+            <p>Create beautiful layouts, responsive components, and modern websites using simple CSS and clean code.</p>
+            <a href="#" class="hero-btn">Get Started</a>
+        </div>
+        <img src="/Images/SmartWatch.jpg" alt="Hero Image">
+    </section>
+
+</body>
+
+</html>
