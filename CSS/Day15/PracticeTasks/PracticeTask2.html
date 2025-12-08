@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Box</title>
+    <style>
+        /* Default desktop styles */
+        .responsive-box {
+            width: 400px;    /* Fixed width on desktop */
+            height: 200px;
+            background-color: #4e54c8;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 50px auto;
+            border-radius: 10px;
+            text-align: center;
+            transition: width 0.3s ease;
+        }
+
+        /* Mobile styles */
+        @media (max-width: 600px) {
+            .responsive-box {
+                width: 100%;   /* Full width on mobile */
+                margin: 20px auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="responsive-box">
+        <p>I become full width on mobile!</p>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Responsive Portfolio (HTML + CSS Only)</title>
+    <style>
+        /* RESET */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Poppins", sans-serif;
+            line-height: 1.6;
+        }
+
+        /* NAVBAR */
+        nav {
+            background: #222;
+            color: #fff;
+            padding: 18px 10%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav .logo {
+            font-size: 1.6rem;
+            font-weight: 600;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: 500;
+        }
+
+        /* MOBILE MENU CHECKBOX HACK */
+        #menu {
+            display: none;
+        }
+
+        .menu-icon {
+            display: none;
+            font-size: 28px;
+            cursor: pointer;
+        }
+
+        /* HERO SECTION */
+        .hero {
+            padding: 60px 10%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            margin: 15px 0;
+            font-size: 1.1rem;
+        }
+
+        .hero img {
+            width: 100%;
+            border-radius: 12px;
+        }
+
+        /* ABOUT */
+        .about {
+            padding: 60px 10%;
+            text-align: center;
+        }
+
+        .about p {
+            max-width: 750px;
+            margin: 15px auto;
+        }
+
+        /* SKILLS */
+        .skills {
+            padding: 60px 10%;
+        }
+
+        .skills h2 {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .skill-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 20px;
+        }
+
+        .skill-box {
+            padding: 20px;
+            background: #f5f5f5;
+            text-align: center;
+            border-radius: 8px;
+            font-weight: 600;
+        }
+
+        /* PORTFOLIO GRID */
+        .portfolio {
+            padding: 60px 10%;
+        }
+
+        .portfolio h2 {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .gallery {
+            display: grid;
+            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        }
+
+        .gallery img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        /* CONTACT */
+        .contact {
+            padding: 60px 10%;
+            text-align: center;
+        }
+
+        footer {
+            background: #222;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+        /* ------------------------------
+   RESPONSIVE BREAKPOINTS
+--------------------------------*/
+
+        /* TABLET */
+        @media (max-width: 900px) {
+            .hero {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+        }
+
+        /* MOBILE */
+        @media (max-width: 600px) {
+
+            .menu-icon {
+                display: block;
+            }
+
+            nav ul {
+                position: absolute;
+                top: 65px;
+                right: 10%;
+                background: #333;
+                padding: 20px;
+                border-radius: 10px;
+                flex-direction: column;
+                gap: 20px;
+                display: none;
+                width: 180px;
+            }
+
+            #menu:checked~ul {
+                display: flex;
+            }
+
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- NAVBAR -->
+    <nav>
+        <div class="logo">My Portfolio</div>
+        <!-- CSS ONLY MENU -->
+        <label for="menu" class="menu-icon"> &#9776; </label> <!-- &#9776 (hamburger menu)-->
+        <input type="checkbox" id="menu">
+
+        <ul>
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#portfolio">Work</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <!-- HERO -->
+    <section id="hero" class="hero">
+        <div>
+            <h1>Hello, I'm Surendhiran</h1>
+            <p>Frontend Developer who builds modern and responsive websites using HTML & CSS.</p>
+        </div>
+        <img src="https://picsum.photos/id/1015/500/400">
+    </section>
+    <!-- ABOUT -->
+    <section id="about" class="about">
+        <h2>About Me</h2>
+        <p>I create clean, mobile-friendly websites using modern CSS techniques like Flexbox, Grid, and responsive
+            breakpoints.</p>
+    </section>
+    <!-- SKILLS -->
+    <section id="skills" class="skills">
+        <h2>My Skills</h2>
+        <div class="skill-grid">
+            <div class="skill-box">HTML</div>
+            <div class="skill-box">CSS</div>
+            <div class="skill-box">JavaScript</div>
+            <div class="skill-box">Responsive Design</div>
+            <div class="skill-box">UI Design</div>
+        </div>
+    </section>
+    <!-- PORTFOLIO -->
+    <section id="portfolio" class="portfolio">
+        <h2>My Work</h2>
+        <div class="gallery">
+            <img src="https://picsum.photos/id/1011/400/300">
+            <img src="https://picsum.photos/id/1020/400/300">
+            <img src="https://picsum.photos/id/1030/400/300">
+            <img src="https://picsum.photos/id/1040/400/300">
+            <img src="https://picsum.photos/id/1050/400/300">
+            <img src="https://picsum.photos/id/1060/400/300">
+        </div>
+    </section>
+    <!-- CONTACT -->
+    <section id="contact" class="contact">
+        <h2>Contact Me</h2>
+        <p>Email: suren@gmail.com</p>
+        <p>Phone: 98765 43210</p>
+    </section>
+    <footer>
+        <p>&copy; copyrights 2025 Surendhiran — All Rights Reserved</p></footer>
+</body>
+
+</html>

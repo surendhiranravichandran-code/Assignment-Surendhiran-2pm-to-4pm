@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Responsive Pricing Table</title>
+    <style>
+        /* RESET */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        /* PRICING SECTION */
+        .pricing {
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .pricing-grid {
+            display: grid;
+            gap: 25px;
+            margin-top: 20px;
+            width: 90%;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+
+            /* FIXED 3-column removed → auto responsive */
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        }
+
+        /* PRICING CARDS */
+        .price-card {
+            background: #fff;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .price-card h3 {
+            font-size: 1.3rem;
+            font-weight: 600;
+        }
+
+        .price {
+            font-size: 2.2rem;
+            font-weight: bold;
+            color: #4e54c8;
+        }
+
+        .price-card ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .price-card ul li {
+            margin: 6px 0;
+        }
+
+        .price-card button {
+            background: #4e54c8;
+            color: #fff;
+            padding: 12px 0;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            margin-top: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- PRICING SECTION -->
+    <section class="pricing">
+        <h2>Our Pricing</h2>
+
+        <div class="pricing-grid">
+            <div class="price-card">
+                <h3>Basic</h3>
+                <p class="price">$9/mo</p>
+                <ul>
+                    <li>✔ 5 Projects</li>
+                    <li>✔ Basic Support</li>
+                    <li>✔ 1 GB Storage</li>
+                </ul>
+                <button>Choose Plan</button>
+            </div>
+
+            <div class="price-card">
+                <h3>Standard</h3>
+                <p class="price">$19/mo</p>
+                <ul>
+                    <li>✔ 15 Projects</li>
+                    <li>✔ Priority Support</li>
+                    <li>✔ 10 GB Storage</li>
+                </ul>
+                <button>Choose Plan</button>
+            </div>
+
+            <div class="price-card">
+                <h3>Premium</h3>
+                <p class="price">$49/mo</p>
+                <ul>
+                    <li>✔ Unlimited Projects</li>
+                    <li>✔ 24/7 Support</li>
+                    <li>✔ 100 GB Storage</li>
+                </ul>
+                <button>Choose Plan</button>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Hero Section</title>
+    <style>
+        /* ---------- GLOBAL ---------- */
+        body {
+            margin: 0;
+            font-family: "Poppins", sans-serif;
+        }
+
+        .hero {
+            min-height: 100vh;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            padding: 50px;
+            gap: 40px;
+            background: #f5f7fa;
+        }
+
+        /* ---------- TEXT CONTENT ---------- */
+        .hero-text h1 {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .hero-text p {
+            font-size: clamp(1rem, 2.5vw, 1.2rem);
+            margin-bottom: 30px;
+            line-height: 1.6;
+            color: #555;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 14px 30px;
+            background: #4a63e7;
+            color: white;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 1.1rem;
+            transition: 0.3s ease;
+        }
+
+        .btn:hover {
+            background: #364dcc;
+        }
+
+        /* ---------- IMAGE ---------- */
+        .hero img {
+            width: 100%;
+            max-width: 500px;
+            border-radius: 20px;
+        }
+
+        /* ---------- MOBILE (below 768px) ---------- */
+        @media (max-width: 768px) {
+            .hero {
+                grid-template-columns: 1fr;
+                /* One column */
+                text-align: center;
+                padding: 30px;
+            }
+
+            .hero img {
+                margin: 0 auto;
+            }
+        }
+
+        /* ---------- SMALL MOBILE (below 480px) ---------- */
+        @media (max-width: 480px) {
+            .btn {
+                width: 100%;
+                padding: 15px;
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- ---------- HERO SECTION ---------- -->
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Welcome to My Website</h1>
+            <p>
+                I build modern, responsive, and clean websites using HTML, CSS, and JavaScript.
+                Explore my work and let's build something amazing!
+            </p>
+            <a href="#" class="btn">Get Started</a>
+        </div>
+        <div class="hero-image">
+            <img src="https://via.placeholder.com/600x400" alt="Hero Image">
+        </div>
+    </section>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive columns</title>
+    <style>
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 1fr; /*2 column*/
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .box {
+            background-color: blue;
+            color: white;
+            padding: 25px;
+            border-radius: 10px;
+            text-align: center;
+            font-size: 1.2rem;
+        }
+        /*mobile view*/
+        @media (max-width:768px) {
+            .container {
+                display: grid;
+                grid-template-columns: 1fr;  /*1 column*/
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">column1</div>
+        <div class="box">column2</div>
+    </div>
+</body>
+
+</html>

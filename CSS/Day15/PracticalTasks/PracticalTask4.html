@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Responsive Photo Gallery</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        /* GALLERY GRID */
+        .gallery {
+            display: grid;
+            gap: 15px;
+
+            /* Auto-responsive grid */
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        }
+
+        .gallery img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.15);
+        }
+    </style>
+</head>
+<body>
+    <h2>Photo Gallery</h2>
+    <div class="gallery">
+        <img src="https://picsum.photos/id/1011/400/300" alt="img1">
+        <img src="https://picsum.photos/id/1015/400/300" alt="img2">
+        <img src="https://picsum.photos/id/1020/400/300" alt="img3">
+        <img src="https://picsum.photos/id/1035/400/300" alt="img4">
+        <img src="https://picsum.photos/id/1040/400/300" alt="img5">
+        <img src="https://picsum.photos/id/1050/400/300" alt="img6">
+    </div>
+</body>
+
+</html>
