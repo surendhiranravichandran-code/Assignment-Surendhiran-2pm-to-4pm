@@ -1,0 +1,444 @@
+/* =====================================================
+   GLOBAL RESET & BASE STYLES
+===================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    line-height: 1.6;
+    background: #ffffff;
+    color: #222;
+}
+
+ul,
+nav {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+a,
+a:link,
+a:visited {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s;
+}
+
+/* =====================================================
+   HEADER
+===================================================== */
+header {
+    display: grid;
+    grid-template-areas:
+        "title"
+        "subtitle"
+        "tagline"
+        "nav";
+    text-align: center;
+    padding: 40px 20px;
+    gap: 15px;
+    justify-content: center;
+    place-items: center;
+}
+
+header h1 {
+    grid-area: title;
+    font-size: 2.4rem;
+}
+
+header h4 {
+    grid-area: subtitle;
+    font-weight: 500;
+}
+
+header p {
+    grid-area: tagline;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+header nav {
+    grid-area: nav;
+}
+
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+nav ul li a {
+    padding: 10px 14px;
+}
+
+nav ul li a:hover {
+    color: #4e54c8;
+}
+
+.responsive-media{
+   width: 100%;
+}
+
+/* =====================================================
+   HERO SECTION
+===================================================== */
+.hero-gradient {
+    display: grid;
+    place-items: center;
+    text-align: center;
+    padding: 50px 20px;
+    margin: 20px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #4e54c8, #8f94fb);
+    color: #fff;
+}
+
+.hero-gradient h1 {
+    font-size: clamp(2rem, 6vw, 3rem);
+    margin-bottom: 10px;
+}
+
+.hero-gradient p {
+    font-size: clamp(1rem, 3vw, 1.3rem);
+}
+
+/* =====================================================
+   ABOUT ME SECTION
+===================================================== */
+main section:nth-of-type(1) {
+    padding: 40px 20px;
+}
+
+main section:nth-of-type(1) p {
+    max-width: 800px;
+    margin: 10px auto;
+    line-height: 1.8;
+}
+
+/* =====================================================
+   PROJECT SECTION (Responsive Grid)
+===================================================== */
+.project-section {
+    display: grid;
+    gap: 20px;
+    background: url("/images/image.png") center/cover no-repeat;
+    padding: 30px 20px;
+    margin: 40px 20px;
+    color: rgb(9, 9, 9);
+    border-radius: 10px;
+}
+
+.project-section h3 {
+    margin-top: 15px;
+}
+
+.project-section p {
+    margin-bottom: 15px;
+}
+
+/* =====================================================
+   PRICING TABLE
+===================================================== */
+section table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 15px 0;
+}
+
+section table th,
+section table td {
+    padding: 12px;
+    border: 1px solid #0a0a0a;
+    text-align: center;
+    background: #96c7f1;
+}
+
+section table th {
+    background: #4e54c8;
+    color: #fff;
+}
+
+@media (max-width: 600px) {
+    section table {
+        display: block;
+        overflow-x: auto;
+    }
+}
+
+/* =====================================================
+   TECHNICAL TERMS (Definition List)
+===================================================== */
+dl {
+    max-width: 800px;
+    margin: 20px auto;
+    line-height: 1.6;
+}
+
+dt {
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+dd {
+    margin-left: 20px;
+}
+
+/* =====================================================
+   FEATURES (Nested List)
+===================================================== */
+.features-list ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.features-list ul li {
+    margin: 8px 0;
+    padding-left: 20px;
+    position: relative;
+}
+
+.features-list ul li::before {
+    content: "✔";
+    color: #4e54c8;
+    position: absolute;
+    left: 0;
+}
+
+.features-list ul ul {
+    margin-left: 20px;
+}
+
+/* =====================================================
+   MEDIA SHOWCASE (Audio / Video)
+===================================================== */
+.hero-1 {
+    background: #fafafa;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.hero-1 .content {
+    flex: 1 1 300px;
+}
+
+.hero-1 video,
+.hero-1 audio {
+    width: 80%;
+    border-radius: 8px;
+}
+
+/* =====================================================
+   CONTACT FORM
+===================================================== */
+form {
+    max-width: 600px;
+    margin: 20px auto;
+    display: grid;
+    gap: 15px;
+}
+
+form input,
+form textarea,
+form button {
+    width: 50%;
+    padding: 12px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+}
+
+form input:focus,
+form textarea:focus,
+button:focus {
+    outline: 2px solid #4e54c8;
+    outline-offset: 2px;
+}
+
+form button {
+    background: #4e54c8;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s;
+    min-height: 45px;
+}
+
+form button:hover {
+    background: #3b40a4;
+}
+
+/* =====================================================
+   GOOGLE MAP
+===================================================== */
+iframe {
+    width: 100%;
+    height: 450px;
+    border: 0;
+    border-radius: 10px;
+}
+
+/* =====================================================
+   CONTACT INFO
+===================================================== */
+address {
+    max-width: 600px;
+    margin: 20px auto;
+    font-style: normal;
+    line-height: 1.6;
+}
+
+/* =====================================================
+   FOOTER
+===================================================== */
+footer {
+    margin-top: 50px;
+    padding: 40px 20px;
+    background: #222;
+    color: white;
+    text-align: center;
+    line-height: 1.6;
+}
+
+/* =====================================================
+   BUTTONS
+===================================================== */
+button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+/* =====================================================
+   MEDIA QUERIES (Responsive)
+===================================================== */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: clamp(1.5rem, 5vw, 2rem);
+    }
+
+    header h4 {
+        font-size: clamp(1rem, 4vw, 1.2rem);
+    }
+
+    header p {
+        font-size: clamp(0.9rem, 3vw, 1rem);
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .hero-1 {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project-section {
+        grid-template-columns: 1fr;
+        padding: 20px 15px;
+        margin: 20px 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.4rem;
+    }
+
+    header h4 {
+        font-size: 0.95rem;
+    }
+
+    header p {
+        font-size: 0.85rem;
+    }
+
+    .hero-gradient {
+        padding: 30px 10px;
+    }
+
+    form,
+    iframe {
+        padding: 0 10px;
+        margin: 10px;
+    }
+
+    .project-section {
+        padding: 15px 10px;
+        margin: 15px 5px;
+    }
+}
+
+.menu-icon {
+    display: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+.menu {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Mobile view */
+@media (max-width: 768px) {
+    .menu-icon {
+        display: block;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .menu {
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    #menu-toggle:checked+.menu-icon+.menu {
+        display: flex;
+    }
+}
+
+/* Contact Me form validations update*/
+
+#sendMsg-btn {
+    background: #0963eb;
+    color: #fff;
+}
+
+#sendMsg-btn:hover {
+    background: #45a049;
+}
+
+#clear-btn {
+    background: #0666ec;
+    color: #fff;
+}
+
+#clear-btn:hover {
+    background: #da190b;
+}
+
+#confirmation {
+    margin-top: 15px;
+    font-weight: bold;
+    font-size: 14px;
+}
