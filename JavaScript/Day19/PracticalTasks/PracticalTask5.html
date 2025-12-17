@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>App Initialization using IIFE</title>
+</head>
+<body>
+
+  <h2 id="title"></h2>
+  <p id="status"></p>
+
+  <script>
+    // App Initialization using IIFE
+    (function () {
+      console.log("App Initialized");
+
+      document.getElementById("title").innerText = "Welcome to My App";
+      document.getElementById("status").innerText = "App loaded successfully!";
+    })();
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marks To Grade Convertor</title>
+</head>
+
+<body>
+    <input type="number" id="marks" placeholder="Enter marks">
+    <button onclick="checkGrade()">Check Grade</button>
+    <p id="result"></p>
+
+    <script>
+        function getGrade(marks) {
+            if (marks >= 90) {
+                return "A";
+            }
+            else if (marks >= 75) {
+                return "B";
+            }
+            else if (marks >= 60) {
+                return "C";
+            }
+            else if (marks >= 40) {
+                return "D";
+            }
+            else {
+                return "F";
+            }
+        }
+
+        function checkGrade() {
+            var marks = document.getElementById("marks").value;
+            document.getElementById("result").innerText = "Your Grade is: " + getGrade(marks);
+        }
+    </script>
+
+</body>
+
+</html>

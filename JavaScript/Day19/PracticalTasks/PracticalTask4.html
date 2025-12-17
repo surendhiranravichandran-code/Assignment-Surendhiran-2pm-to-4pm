@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Array Processing with Callbacks</title>
+</head>
+<body>
+
+  <h2>Array Processing with Callbacks</h2>
+
+  <label>Enter numbers (comma separated):</label><br><br>
+  <input type="text" id="nums" placeholder="10,20,30">
+  <br><br>
+
+  <button onclick="processArray()">Process</button>
+
+  <p id="output"></p>
+
+  <script>
+    // Custom callback function
+    function double(num) {
+      return num * 2;
+    }
+
+    function processArray() {
+
+      // Get user input
+      let input = document.getElementById("nums").value;
+
+      // Convert input string to array of numbers
+      let numbers = input.split(",").map(Number);
+
+      // forEach example
+      let text1 = "Numbers: ";
+      numbers.forEach(function(n) {
+        text1 += n + " ";
+      });
+
+      // map example using callback
+      let doubled = numbers.map(double);
+
+      let text2 = "Doubled Numbers: ";
+      doubled.forEach(function(d) {
+        text2 += d + " ";
+      });
+
+      document.getElementById("output").innerHTML =
+        text1 + "<br>" + text2;
+    }
+  </script>
+
+</body>
+</html>
