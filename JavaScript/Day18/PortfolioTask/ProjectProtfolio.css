@@ -127,10 +127,10 @@ main section:nth-of-type(1) p {
 .project-section {
     display: grid;
     gap: 20px;
-    background: url("/images/photo-1589287707312-213624549c88.avif") center/cover no-repeat;
+    background: url("/images/image.png") center/cover no-repeat;
     padding: 30px 20px;
     margin: 40px 20px;
-    color: white;
+    color: rgb(16, 16, 16);
     border-radius: 10px;
 }
 
