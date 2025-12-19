@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Marksheet</title>
+</head>
+<body>
+    <h2>Student Marksheet</h2>
+    <input type="number" id="marks" placeholder="Enter marks (0-100)">
+    <button onclick="checkGrade()">Check Result</button>
+    <p id="output"></p>
+    <script>
+        function checkGrade() {
+            let marks = document.getElementById("marks").value;
+            let output = document.getElementById("output");
+
+            if (marks === "" || marks < 0 || marks > 100) {
+                output.textContent = "Please enter valid marks (0-100)";
+            } else if (marks >= 90) {
+                output.textContent = "Grade: A+ | Remark: Excellent";
+            } else if (marks >= 75) {
+                output.textContent = "Grade: A | Remark: Very Good";
+            } else if (marks >= 60) {
+                output.textContent = "Grade: B | Remark: Good";
+            } else if (marks >= 40) {
+                output.textContent = "Grade: C | Remark: Pass";
+            } else {
+                output.textContent = "Grade: F | Remark: Fail";
+            }
+        }
+    </script>
+</body>
+</html>

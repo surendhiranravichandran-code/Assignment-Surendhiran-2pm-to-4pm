@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Total Calculator</title>
+</head>
+<h2>Shopping Cart Total Calculator</h2>
+
+<input type="text" id="TotalCalc" placeholder="Enter prices like 10,10,30,40">
+<button onclick="calculateTotal()">Total</button>
+
+<p id="output"></p>
+
+<script>
+    function calculateTotal() {
+        const input = document.getElementById("TotalCalc").value;
+        const prices = input.split(","); // convert string to array
+
+        let total = 0;
+        for (let i = 0; i < prices.length; i++) {
+            total += Number(prices[i]);
+        }
+
+        document.getElementById("output").innerText = "Total Price: " + total;
+    }
+</script>
+</body>
+
+</html>

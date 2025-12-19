@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age Calculator</title>
+</head>
+
+<body>
+    <div class="ageCalc">
+        <h2>Age Calculator</h2>
+        <input type="text" id="ageInput"  placeholder="Enter your age">
+        <button onclick="age()">Check</button>
+        <p id="output"></p>
+    </div>
+   <script>
+        function age() {
+            const age = document.getElementById("ageInput").value
+            const output = document.getElementById("output");
+            if (age === "" || age < 0) {
+                output.textContent = "Invalid age";
+            } else if (age <= 12) {
+                output.textContent = "Child";
+            } else if (age <= 19) {
+                output.textContent = "Teen";
+            } else if (age <= 59) {
+                output.textContent = "Adult";
+            } else {
+                output.textContent = "Senior";
+            }
+        }
+    </script>
+</body>
+
+</html>
