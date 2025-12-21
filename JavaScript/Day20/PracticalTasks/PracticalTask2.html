@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User Login Logout</title>
+</head>
+<body>
+
+    <h2>User Authentication</h2>
+
+    <button onclick="user.login()">Login</button>
+    <button onclick="user.logout()">Logout</button>
+
+    <p id="status"></p>
+
+    <script>
+        const user = {
+            username: "Surendhiran",
+
+            login() {
+                document.getElementById("status").innerText =
+                    this.username + " logged in";
+            },
+
+            logout() {
+                document.getElementById("status").innerText =
+                    this.username + " logged out";
+            }
+        };
+    </script>
+
+</body>
+</html>

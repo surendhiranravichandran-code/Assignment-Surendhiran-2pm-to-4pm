@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Student Class</title>
+</head>
+
+<body>
+
+    <h2>Student Details</h2>
+    <button onclick="showStudents()">Show Students</button>
+
+    <pre id="output"></pre>
+
+    <script>
+        class Student {
+            constructor(name, age, grade) {
+                this.name = name;
+                this.age = age;
+                this.grade = grade;
+            }
+
+            display() {
+                return `Name: ${this.name}
+                         Age: ${this.age}
+                       Grade: ${this.grade}\n`;
+            }
+        }
+
+        function showStudents() {
+            const s1 = new Student("Rohit", 20, "A");
+            const s2 = new Student("Arun", 21, "B");
+            const s3 = new Student("Surendhiran", 22, "A+");
+
+            document.getElementById("output").innerText = s1.display() + s2.display() + s3.display();
+        }
+    </script>
+
+</body>
+
+</html>

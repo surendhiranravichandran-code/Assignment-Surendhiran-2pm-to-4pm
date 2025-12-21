@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discount Product</title>
+</head>
+
+<body>
+
+    <h2>Discount Product</h2>
+
+    <input type="text" id="pname" placeholder="Enter product name">
+    <input type="number" id="price" placeholder="Enter price">
+    <input type="number" id="discount" placeholder="Enter discount %">
+
+    <button onclick="calculate()">Price total</button>
+    <p id="DiscountRate"></p>
+
+    <script>
+        class Product {
+            constructor(name, price) {
+                this.name = name;
+                this.price = price;
+            }
+
+            discountedPrice(discountPercent) {
+                const discountAmount = (this.price * discountPercent) / 100;
+                const finalPrice = this.price - discountAmount;
+                return finalPrice;
+            }
+        }
+
+        function calculate() {
+            const name = document.getElementById("pname").value;
+            const price = Number(document.getElementById("price").value);
+            const discount = Number(document.getElementById("discount").value);
+
+            const product = new Product(name, price);
+            const finalPrice = product.discountedPrice(discount);
+            document.getElementById("DiscountRate").innerHTML =`Product <b>${name}</b> final price is <b>₹${finalPrice}</b>`;
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Student Prototype</title>
+</head>
+
+<body>
+
+    <h2>Student Prototype Example</h2>
+    <button onclick="show()">Show Students</button>
+
+    <pre id="output"></pre>
+
+    <script>
+        class Student {
+            constructor(name, age) {
+                this.name = name;
+                this.age = age;
+            }
+        }
+
+        //  Add method dynamically to ALL Student objects
+        Student.prototype.sayHello = function () {
+            return `Hello, my name is ${this.name}`;
+        };
+
+        function show() {
+            const s1 = new Student("Arun", 20);
+            const s2 = new Student("Rohit", 21);
+            const s3 = new Student("Surendhiran", 22);
+
+            document.getElementById("output").innerText =
+                s1.sayHello() + "\n" +
+                s2.sayHello() + "\n" +
+                s3.sayHello();
+        }
+    </script>
+
+</body>
+
+</html>

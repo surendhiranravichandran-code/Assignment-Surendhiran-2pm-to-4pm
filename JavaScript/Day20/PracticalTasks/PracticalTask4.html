@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Shape Inheritance</title>
+</head>
+
+<body>
+
+    <h2>Circle Area Calculator</h2>
+    <button onclick="calculateArea()">Calculate Area</button>
+
+    <p id="result"></p>
+
+    <script>
+        // Base class
+        class Shape {
+            constructor(name) {
+                this.name = name;
+            }
+
+            display() {
+                return `Shape: ${this.name}`;
+            }
+        }
+
+        // Subclass
+        class Circle extends Shape {
+            constructor(radius) {
+                super("Circle"); // call parent constructor
+                this.radius = radius;
+            }
+
+            area() {
+                return Math.PI * this.radius * this.radius;
+            }
+        }
+
+        function calculateArea() {
+            const circle = new Circle(5); // radius = 5
+            const result =
+                `${circle.display()} | Area: ${circle.area().toFixed(2)}`;
+
+            document.getElementById("result").innerText = result;
+        }
+    </script>
+
+</body>
+
+</html>
