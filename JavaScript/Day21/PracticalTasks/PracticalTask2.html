@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adult Age Filter</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f4f8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background-color: #fff;
+            padding: 20px 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            width: 350px;
+            text-align: center;
+        }
+        input[type="text"] {
+            width: 90%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            border: none;
+            color: #fff;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        p {
+            margin-top: 15px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Enter Students' Ages</h2>
+        <input type="text" id="ageInput" placeholder="e.g. 15,17,18,20,16,22">
+        <br>
+        <button onclick="showAdults()">Show Adults</button>
+        <p id="result"></p>
+    </div>
+
+    <script>
+        function showAdults() {
+            const input = document.getElementById("ageInput").value;
+            if (!input) {
+                document.getElementById("result").textContent = "Please enter ages.";
+                return;
+            }
+
+            // Convert input string to array of numbers
+            const ages = input.split(',').map(age => parseInt(age.trim()));
+
+            // Filter adults (age >= 18)
+            const adults = ages.filter(age => !isNaN(age) && age >= 18);
+
+            document.getElementById("result").textContent = 
+                adults.length > 0 ? "Adults: " + adults.join(", ") : "No adults found.";
+        }
+    </script>
+</body>
+</html>

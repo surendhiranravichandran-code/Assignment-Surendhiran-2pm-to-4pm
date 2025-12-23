@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Product List</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        ul {
+            width: 200px;
+        }
+        li {
+            padding: 6px;
+            background-color: #f2f2f2;
+            margin-bottom: 5px;
+            list-style: none;
+        }
+    </style>
+</head>
+<body>
+    <h2>Product Names</h2>
+    <ul id="productList"></ul>
+
+    <script>
+        // Array of products
+        let products = ["Mobile", "Laptop", "Headphones", "Keyboard", "Mouse"];
+
+        // Select UL element
+        let list = document.getElementById("productList");
+
+        // Display product names using forEach()
+        products.forEach(function(product) {
+            let li = document.createElement("li");
+            li.textContent = product;
+            list.appendChild(li);
+        });
+    </script>
+</body>
+</html>

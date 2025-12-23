@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reduce Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f2f2f2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .box {
+            background: #fff;
+            padding: 20px 30px;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        button {
+            padding: 8px 15px;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+
+        p {
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h2>Reduce() Total</h2>
+        <button onclick="calculateTotal()">Calculate Total</button>
+        <p id="result"></p>
+    </div>
+    <script>
+        function calculateTotal() {
+            const numbers = [10, 20, 30, 40];
+
+            const total = numbers.reduce((sum, num) => {
+                return sum + num;
+            }, 0);
+
+            document.getElementById("result").innerText =
+                "Total = " + total;
+
+            console.log("Total:", total);
+        }
+    </script>
+</body>
+</html>
