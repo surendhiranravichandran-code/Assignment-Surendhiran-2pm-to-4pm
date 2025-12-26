@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Button Color Change</title>
+    <style>
+        button {
+            padding: 10px 20px;
+            margin: 10px;
+            border: none;
+            cursor: pointer;
+            background-color: lightgray;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Click a button to change its color</h2>
+
+<button class="colorBtn">Button 1</button>
+<button class="colorBtn">Button 2</button>
+<button class="colorBtn">Button 3</button>
+
+<script>
+    // Select all buttons
+    let buttons = document.querySelectorAll(".colorBtn");
+
+    // Loop through buttons
+    buttons.forEach(function (btn) {
+        btn.addEventListener("click", function () {
+
+            // Change only clicked button color
+            this.style.backgroundColor = "tomato";
+            this.style.color = "white";
+        });
+    });
+</script>
+
+</body>
+</html>
