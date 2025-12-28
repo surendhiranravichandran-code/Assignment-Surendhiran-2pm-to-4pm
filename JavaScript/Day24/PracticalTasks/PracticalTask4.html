@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login Validation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        form {
+            width: 350px;
+            padding: 15px;
+            border: 2px solid black;
+        }
+        input {
+            width: 90%;
+            padding: 8px;
+            margin-bottom: 5px;
+        }
+        .error {
+            color: red;
+            font-size: 14px;
+            margin-bottom: 8px;
+        }
+        .success {
+            color: green;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        button {
+            padding: 8px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+<h3>Login</h3>
+
+<form id="loginForm">
+    <input type="text" id="username" placeholder="Username">
+    <div id="userError" class="error"></div>
+
+    <input type="password" id="password" placeholder="Password">
+    <div id="passError" class="error"></div>
+
+    <button type="submit">Login</button>
+</form>
+
+<div id="message"></div>
+
+<script>
+    const form = document.getElementById("loginForm");
+    const message = document.getElementById("message");
+
+    form.addEventListener("submit", (event) => {
+        event.preventDefault(); // stop refresh
+
+        // get values
+        const username = document.getElementById("username").value.trim();
+        const password = document.getElementById("password").value.trim();
+
+        // error fields
+        const userError = document.getElementById("userError");
+        const passError = document.getElementById("passError");
+
+        // reset
+        userError.textContent = "";
+        passError.textContent = "";
+        message.textContent = "";
+        message.className = "";
+
+        let isValid = true;
+
+        if (username === "") {
+            userError.textContent = "Username is required";
+            isValid = false;
+        }
+
+        if (password === "") {
+            passError.textContent = "Password is required";
+            isValid = false;
+        } else if (password.length < 6) {
+            passError.textContent = "Password must be at least 6 characters";
+            isValid = false;
+        }
+
+        if (isValid) {
+            message.textContent = "Login successful ✔";
+            message.className = "success";
+        }
+    });
+</script>
+
+</body>
+</html>

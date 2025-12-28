@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Number Validation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        input {
+            padding: 8px;
+            width: 200px;
+        }
+        button {
+            padding: 8px;
+            margin-top: 10px;
+        }
+        .result {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        .error {
+            color: red;
+        }
+        .success {
+            color: green;
+        }
+    </style>
+</head>
+<body>
+
+    <h3>Enter a Number</h3>
+
+    <input type="text" id="numberInput" placeholder="Enter a number">
+    <br>
+    <button onclick="validateNumber()">Validate</button>
+
+    <div id="result" class="result"></div>
+
+    <script>
+        function validateNumber() {
+            const input = document.getElementById("numberInput").value;
+            const result = document.getElementById("result");
+
+            result.textContent = "";
+            result.className = "result";
+
+            try {
+                if (input === "") {
+                    throw new Error("Input cannot be empty");
+                }
+
+                if (isNaN(input)) {
+                    throw new Error("Please enter a valid number");
+                }
+
+                result.textContent = "Valid number ✔";
+                result.classList.add("success");
+
+            } catch (error) {
+                result.textContent = error.message;
+                result.classList.add("error");
+            }
+        }
+    </script>
+
+</body>
+</html>

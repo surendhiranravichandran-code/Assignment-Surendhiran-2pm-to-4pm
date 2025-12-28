@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Custom Form Error</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        form {
+            width: 300px;
+            padding: 15px;
+            border: 2px solid black;
+        }
+        input {
+            width: 90%;
+            padding: 8px;
+            margin-bottom: 8px;
+        }
+        .error {
+            color: red;
+            font-size: 14px;
+        }
+        .success {
+            color: green;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h3>Register</h3>
+
+    <form id="myForm">
+        <input type="text" id="name" placeholder="Enter name">
+        <input type="email" id="email" placeholder="Enter email">
+        <button type="submit">Submit</button>
+    </form>
+
+    <div id="message"></div>
+
+    <script>
+        const form = document.getElementById("myForm");
+        const message = document.getElementById("message");
+
+        form.addEventListener("submit", (event) => {
+            event.preventDefault(); // stop refresh
+
+            message.textContent = "";
+            message.className = "";
+
+            try {
+                const name = document.getElementById("name").value.trim();
+                const email = document.getElementById("email").value.trim();
+
+                if (name === "") {
+                    throw new Error("Name field cannot be empty");
+                }
+
+                if (email === "") {
+                    throw new Error("Email field cannot be empty");
+                }
+
+                message.textContent = "Form submitted successfully ✔";
+                message.className = "success";
+
+            } catch (error) {
+                message.textContent = error.message;
+                message.className = "error";
+            }
+        });
+    </script>
+
+</body>
+</html>

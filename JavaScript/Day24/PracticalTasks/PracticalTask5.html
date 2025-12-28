@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Billing System</title>
+    <style>
+        .box {
+            width: 300px;
+            border: 2px solid black;
+            padding: 15px;
+        }
+
+        input {
+            width: 100%;
+            margin-bottom: 8px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Simple Billing System</h2>
+
+    <div class="box">
+        <input type="number" id="price" placeholder="Product Price">
+        <input type="number" id="qty" placeholder="Quantity">
+        <button onclick="calculate()">Calculate</button>
+
+        <p>Total: ₹<span id="total">0</span></p>
+        <p>Discount: ₹<span id="discount">0</span></p>
+        <p>Final Price: ₹<span id="final">0</span></p>
+    </div>
+
+    <script>
+
+        function calculate() {
+            let price = Number(document.getElementById("price").value);
+            let qty = Number(document.getElementById("qty").value);
+
+            //     let total = price + qty;           //  ERROR 1
+            //     let discount = total * 10 / 100;   //  ERROR 2
+            //     let finalPrice = total + discount; //  ERROR 3
+
+            let total = price * qty;              //  multiply
+            let discount = total * 10 / 100;      //  10% discount
+            let finalPrice = total - discount;    // subtract discount
+
+            document.getElementById("total").innerText = total;
+            document.getElementById("discount").innerText = discount;
+            document.getElementById("final").innerText = finalPrice;
+        }
+
+
+
+    </script>
+</body>
+
+</html>
