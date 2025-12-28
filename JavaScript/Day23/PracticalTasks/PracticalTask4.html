@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form Validation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        form {
+            width: 300px;
+            padding: 15px;
+            border: 2px solid black;
+        }
+        input {
+            width: 95%;
+            padding: 8px;
+            margin-bottom: 5px;
+        }
+        .error {
+            color: red;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+        .success {
+            color: green;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h3>Register</h3>
+
+    <form id="myForm">
+        <input type="text" id="name" placeholder="Enter name">
+        <div id="nameError" class="error"></div>
+
+        <input type="email" id="email" placeholder="Enter email">
+        <div id="emailError" class="error"></div>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <div id="successMsg" class="success"></div>
+
+    <script>
+        const form = document.getElementById("myForm");
+
+        form.addEventListener("submit", (event) => {
+            event.preventDefault(); // stop page refresh
+
+            // get values
+            const name = document.getElementById("name").value.trim();
+            const email = document.getElementById("email").value.trim();
+
+            // error elements
+            const nameError = document.getElementById("nameError");
+            const emailError = document.getElementById("emailError");
+            const successMsg = document.getElementById("successMsg");
+
+            // reset messages
+            nameError.textContent = "";
+            emailError.textContent = "";
+            successMsg.textContent = "";
+
+            let isValid = true;
+
+            // validation
+            if (name === "") {
+                nameError.textContent = "Name is required";
+                isValid = false;
+            }
+
+            if (email === "") {
+                emailError.textContent = "Email is required";
+                isValid = false;
+            }
+
+            if (isValid) {
+                successMsg.textContent = "Form submitted successfully!";
+            }
+        });
+    </script>
+
+</body>
+</html>

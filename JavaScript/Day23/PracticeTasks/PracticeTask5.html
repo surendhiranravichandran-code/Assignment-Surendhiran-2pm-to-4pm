@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prevent Form Submit</title>
+    <style>
+        form {
+            width: 300px;
+            padding: 15px;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <form id="myForm">
+        <input type="text" id="userName" placeholder="Emter your name" required>
+        <br><br>
+        <button type="submit">Submit</button>
+    </form>
+    <script>
+        const form = document.getElementById("myForm");
+        form.addEventListener("submit", (event) => {
+            event.preventDefault(); // stops page refresh
+            console.log("Form submission prevented!");
+            alert("Form submitted successfully (without refresh)");
+        });
+    </script>
+</body>
+
+</html>

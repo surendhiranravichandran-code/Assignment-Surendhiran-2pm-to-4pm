@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Live Input Text</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        #output {
+            margin-top: 10px;
+            font-size: 18px;
+            color: darkblue;
+        }
+    </style>
+</head>
+<body>
+
+    <input type="text" id="textInput" placeholder="Type something..." />
+    <div id="output"></div>
+
+    <script>
+        const input = document.getElementById("textInput");
+        const output = document.getElementById("output");
+
+        input.addEventListener("input", () => {
+            output.textContent = input.value;
+        });
+    </script>
+
+</body>
+</html>
