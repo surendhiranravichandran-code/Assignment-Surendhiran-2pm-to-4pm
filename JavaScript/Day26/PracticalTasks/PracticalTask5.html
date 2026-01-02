@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Async Login Simulation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .login-box {
+            background: #fff;
+            padding: 20px;
+            width: 300px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        input {
+            width: 90%;
+            padding: 8px;
+            margin: 8px 0;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:disabled {
+            background: gray;
+        }
+
+        p {
+            text-align: center;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="login-box">
+        <h2>Login</h2>
+
+        <input type="text" id="username" placeholder="Username">
+        <input type="password" id="password" placeholder="Password">
+        <button onclick="loginUser()">Login</button>
+
+        <p id="message"></p>
+    </div>
+
+    <script>
+        // Fake API function
+        function fakeLoginApi(username, password) {
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    if (username === "admin" && password === "1234") {
+                        resolve({ user: username });
+                    } else {
+                        reject("Invalid username or password");
+                    }
+                }, 2000);
+            });
+        }
+
+        // Async login flow
+        async function loginUser() {
+            const user = document.getElementById("username").value;
+            const pass = document.getElementById("password").value;
+            const msg = document.getElementById("message");
+            const btn = document.querySelector("button");
+
+            msg.textContent = "Logging in...";
+            btn.disabled = true;
+
+            try {
+                const result = await fakeLoginApi(user, pass);
+                msg.style.color = "green";
+                msg.textContent = `Welcome ${result.user}`;
+            } catch (error) {
+                msg.style.color = "red";
+                msg.textContent = error;
+            } finally {
+                btn.disabled = false;
+            }
+        }
+    </script>
+</body>
+</html>

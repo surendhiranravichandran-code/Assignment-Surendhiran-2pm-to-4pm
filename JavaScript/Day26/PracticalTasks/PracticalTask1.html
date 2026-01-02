@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter using closure</title>
+</head>
+
+<body>
+    <h2>Check the console press F12</h2>
+
+    <script>
+    
+        function counter() {
+            let value = 0;
+
+            return {
+                increment() {
+                    value++;
+                    console.log(value);
+                },
+                decrement() {
+                    value--;
+                    console.log(value);
+                }
+            };
+        }
+
+        const c = counter();
+
+        c.increment(); 
+        c.increment(); 
+        c.decrement(); 
+
+    </script>
+</body>
+
+</html>

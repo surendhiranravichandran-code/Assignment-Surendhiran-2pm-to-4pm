@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data fetch using async/await</title>
+</head>
+
+<body>
+
+    <button onclick="loadData()">Load Users</button>
+    <ul id="list"></ul>
+
+
+    <Script>
+        async function loadData() {
+            try {
+                const res = await fetch("https://jsonplaceholder.typicode.com/users");
+                const users = await res.json();
+
+                const list = document.getElementById("list");
+                list.innerHTML = "";
+
+                users.forEach(user => {
+                    const li = document.createElement("li");
+                    li.textContent = user.name;
+                    list.appendChild(li);
+                });
+            } catch (err) {
+                console.log("Error fetching data");
+            }
+        }
+
+    </Script>
+</body>
+
+</html>
