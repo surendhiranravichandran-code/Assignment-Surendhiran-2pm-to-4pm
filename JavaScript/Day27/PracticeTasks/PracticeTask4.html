@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Object to JSON Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        button {
+            margin: 5px 0;
+            padding: 6px 12px;
+        }
+        pre {
+            background: #f4f4f4;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Convert Object to JSON</h2>
+
+    <button onclick="convertToJSON()">Object to JSON</button>
+    <button onclick="convertToObject()">JSON to Object</button>
+
+    <h3>Output:</h3>
+    <pre id="output"></pre>
+
+    <script>
+        // JavaScript Object
+        const student = {
+            name: "Suren",
+            age: 21,
+            course: "JavaScript"
+        };
+
+        let jsonData = "";
+
+        // Object to JSON
+        function convertToJSON() {
+            jsonData = JSON.stringify(student);
+            document.getElementById("output").textContent = jsonData;
+        }
+
+        // JSON to Object
+        function convertToObject() {
+            const obj = JSON.parse(jsonData);
+            document.getElementById("output").textContent =
+                "Name: " + obj.name + "\n" +
+                "Age: " + obj.age + "\n" +
+                "Course: " + obj.course;
+        }
+    </script>
+
+</body>
+</html>
