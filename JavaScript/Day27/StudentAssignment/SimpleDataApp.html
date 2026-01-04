@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Simple Data App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        button {
+            padding: 8px 14px;
+            margin-bottom: 10px;
+            cursor: pointer;
+        }
+        li {
+            cursor: pointer;
+            margin: 5px 0;
+        }
+        #saved {
+            margin-top: 15px;
+            color: green;
+        }
+        #loading {
+            color: blue;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Simple Data App</h2>
+
+    <button id="loadBtn">Fetch Users</button>
+
+    <p id="loading"></p>
+
+    <ul id="userList"></ul>
+
+    <p id="saved"></p>
+
+    <script>
+        const loadBtn = document.getElementById("loadBtn");
+        const userList = document.getElementById("userList");
+        const savedText = document.getElementById("saved");
+        const loadingText = document.getElementById("loading");
+
+        loadBtn.addEventListener("click", () => {
+            loadingText.textContent = "Loading users...";
+            userList.innerHTML = "";
+
+            fetch("https://jsonplaceholder.typicode.com/users")
+                .then(response => response.json())
+                .then(data => {
+                    loadingText.textContent = "";
+
+                    data.forEach(user => {
+                        const li = document.createElement("li");
+                        li.textContent = `${user.name} - ${user.email}`;
+
+                        li.addEventListener("click", () => {
+                            localStorage.setItem(
+                                "savedUser",
+                                JSON.stringify(user.name)
+                            );
+                            savedText.textContent = `Saved User: ${user.name}`;
+                        });
+
+                        userList.appendChild(li);
+                    });
+                })
+                .catch(error => {
+                    loadingText.textContent = "";
+                    console.error("Error fetching data:", error);
+                    userList.innerHTML = "<li>Failed to load data</li>";
+                });
+        });
+
+        window.addEventListener("DOMContentLoaded", () => {
+            const savedUser = localStorage.getItem("savedUser");
+
+            if (savedUser) {
+                const userName = JSON.parse(savedUser);
+                savedText.textContent = `Saved User: ${userName}`;
+            }
+        });
+    </script>
+
+</body>
+</html>
