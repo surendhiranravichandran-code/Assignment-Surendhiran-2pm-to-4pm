@@ -1,0 +1,64 @@
+<!------------------------------------------------------------------------------------
+.container	                        |       div class="container my-5                 |
+---------------------------------------------------------------------------------------
+Grid (image + text)	                |       .row + .col-md-6                          |
+---------------------------------------------------------------------------------------
+Typography classes	                |       display-6, lead, fw-bold, text-secondary  |
+---------------------------------------------------------------------------------------
+Spacing utilities	                |       my-5, p-4, mb-3, mt-3, px-4               |
+---------------------------------------------------------------------------------------
+Responsive	                        |       col-md-6, mb-3 mb-md-0, img-fluid         |
+---------------------------------------------------------------------------------------
+Background & text colors (Bonus)	|       bg-dark, text-white, bg-light             |
+--------------------------------------------------------------------------------------->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Profile Card Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+
+<body class="bg-light">
+
+    <!-- Container -->
+    <div class="container my-5">
+
+        <!-- Grid -->
+        <div class="row align-items-center bg-dark text-white p-4 rounded">
+
+            <!-- Image Column -->
+            <div class="col-md-6 mb-3 mb-md-0">
+                <img src="/images/image.png" class="img-fluid rounded" alt="Sample Image">
+            </div>
+
+            <!-- Text Column -->
+            <div class="col-md-6">
+                <h1 class="display-6 fw-bold mb-3">Bootstrap Grid Layout</h1>
+
+                <p class="lead">
+                    This section uses Bootstrap's grid system with responsive utilities.
+                </p>
+
+                <p class="text-secondary">
+                    Resize the screen to see how the layout adapts on mobile and desktop.
+                </p>
+
+                <button class="btn btn-primary mt-3 px-4">
+                    Learn More
+                </button>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
+
