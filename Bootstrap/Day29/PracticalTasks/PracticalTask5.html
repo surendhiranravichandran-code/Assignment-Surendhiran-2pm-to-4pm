@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Menu Page</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#">FoodMenu</a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="menuNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Menu</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Menu Section -->
+  <section class="py-5 bg-light">
+    <div class="container">
+      <h2 class="text-center mb-4">Our Menu</h2>
+
+      <div class="row g-4">
+        <!-- Menu Item -->
+        <div class="card h-50 shadow-sm">
+
+          <div class="ratio ratio-16x9">
+            <img src="/Images/melted-cheese-burger.jpg" class=" img-fluid" alt="">
+          </div>
+
+          <div class="card-body">
+            <h5 class="card-title">Burger</h5>
+            <p class="card-text">Juicy grilled burger with cheese.</p>
+            <p class="fw-bold">₹199</p>
+          </div>
+
+        </div>
+
+
+        <!-- Menu Item -->
+        <div class="card h-100 shadow-sm">
+          <div class="ratio ratio-1x1">
+            <img src="/Images/crispy-mixed-pizza-with-olives-sausage.jpg" class="img-fluid" alt="">
+          </div>
+
+          <div class="card-body">
+            <h5 class="card-title">Pizza</h5>
+            <p class="card-text">Cheesy pizza with fresh toppings.</p>
+            <p class="fw-bold">₹299</p>
+          </div>
+        </div>
+
+
+        <!-- Menu Item -->
+        <div class="card h-50 shadow-sm">
+          <div class="ratio ratio-16x9">
+            <img src="/Images/side-view-penne-pasta-with-tomato-sauce-greens-plate.jpg" class=" img-fluid"
+              alt="">
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Pasta</h5>
+            <p class="card-text">Creamy pasta with Italian flavors.</p>
+            <p class="fw-bold">₹249</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    </div>
+  </section>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
