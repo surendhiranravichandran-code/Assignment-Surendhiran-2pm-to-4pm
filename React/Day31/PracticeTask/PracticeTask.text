@@ -1,0 +1,29 @@
+1.Define React in your own words?
+Ans:
+    React is a JavaScript library used for building fast and interactive user interfaces.
+    It follows a component-based architecture, which helps in creating reusable UI components.
+    React efficiently updates the UI using a virtual DOM, improving performance and making applications easier to maintain.
+    It is mainly used for developing single-page applications and is maintained by Meta.
+----------------------------------------------------------------------------------------------------------------------------------
+2.List two advantages of React?
+Ans:
+   Reusable Components,
+   Virtual DOM for Better Performance
+   React improves performance using Virtual DOM and makes development efficient through reusable components.
+----------------------------------------------------------------------------------------------------------------------------------
+3.Identify entry file in React project?
+Ans:
+   The entry file is the file where the React application starts running and where the root component is rendered into the DOM.
+   Here while using vite with react "main.jsx" creates the "root" and it renders app component.
+----------------------------------------------------------------------------------------------------------------------------------
+4.Write a JSX heading?
+Ans:
+    JSX headings are written using HTML-like tags such as <h1> inside a React component’s return statement.
+----------------------------------------------------------------------------------------------------------------------------------
+5.Correct JSX syntax errors?
+Ans:
+    JSX (JavaScript XML) is a syntax extension for JavaScript that allows you to write HTML-like code inside JavaScript.
+    It is used in React to describe the UI structure of components.
+    JSX is not HTML — it gets transformed into JavaScript by React (using Babel) before the browser can render it.
+    It allows embedding JavaScript expressions inside {}.
+----------------------------------------------------------------------------------------------------------------------------------
