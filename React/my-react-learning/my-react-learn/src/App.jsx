@@ -8,7 +8,7 @@ function App() {
     <>
       <h1>Day 32 Tasks</h1>
       <PracticalTask32 />
-      {/* <PracticeTask32 /> */}
+      <PracticeTask32 /> 
       
     </>
   );
