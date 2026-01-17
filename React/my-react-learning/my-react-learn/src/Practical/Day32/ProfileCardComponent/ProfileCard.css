@@ -1,0 +1,41 @@
+.profile-card {
+  width: 300px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  background-color: #fff;
+  text-align: center;
+  margin: 16px;
+  transition: transform 0.2s;
+}
+
+.profile-card:hover {
+  transform: translateY(-5px);
+}
+
+.profile-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.profile-info {
+  padding: 16px;
+}
+
+.profile-name {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.profile-role {
+  margin: 4px 0;
+  font-size: 1rem;
+  color: #777;
+}
+
+.profile-description {
+  font-size: 0.9rem;
+  color: #555;
+}
