@@ -1,22 +1,18 @@
-.actions {
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-}
-
 .btn {
-  padding: 10px 24px;
-  border-radius: 6px;
+  padding: 12px 26px;
   font-size: 16px;
+  border-radius: 8px;
   cursor: pointer;
 }
 
+/* Primary */
 .primary {
   background: #2563eb;
   color: white;
   border: none;
 }
 
+/* Secondary */
 .secondary {
   background: transparent;
   border: 2px solid #2563eb;

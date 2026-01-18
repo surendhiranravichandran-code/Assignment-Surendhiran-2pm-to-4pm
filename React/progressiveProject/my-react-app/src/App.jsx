@@ -1,35 +1,31 @@
-import './App.css'
-import child from './child'  // import the child component
+import "./App.css";
 import User from "./User";
-import Button from './Button';
-import Layout from './Layout';
-
-
-
+import Button from "./Button";
+import Layout from "./Layout";
+import Child from "./Child";
 
 function App() {
-  const msg = "Welcome to my App"
-  const childMsg = "This message is passed as a prop!"
-   
+  const msg = "Welcome to my App";
+  const childMsg = "This message is passed as a prop!";
 
   return (
-    <>
     <Layout>
-    <div>
-       <User name="Surendhiran" />
+      <User name="Surendhiran" />
       <h1>{msg}</h1>
+
       <p>
-        Set up a React development environment, Understand how files connect, Write JSX confidently, Prepare for components & props
+        Set up a React development environment, Understand how files connect,
+        Write JSX confidently, Prepare for components & props
       </p>
-      <child message={childMsg} />
-    </div>
-     <div className="actions">
-     <Button  className="btn primary" text="Login"/>
-     <Button className="btn secondary"  text="SignUp"/>
-     </div>
-     </Layout>
-    </>
-  )
+
+      <Child message={childMsg} />
+
+      <div className="actions">
+        <Button className="primary" text="Login" />
+        <Button className="secondary" text="SignUp" />
+      </div>
+    </Layout>
+  );
 }
 
-export default App
+export default App;

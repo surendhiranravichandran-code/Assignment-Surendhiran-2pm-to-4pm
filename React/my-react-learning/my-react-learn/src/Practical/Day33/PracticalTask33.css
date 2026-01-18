@@ -1,0 +1,87 @@
+/* Container */
+.day33-container {
+  min-height: 100vh;
+  padding: 30px;
+  text-align: center;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Themes */
+.light-page {
+  background-color: #f9fafb;
+  color: #000;
+}
+
+.dark-page {
+  background-color: #111827;
+  color: #fff;
+}
+
+/* Buttons */
+.button-group {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin: 15px 0;
+}
+
+.btn {
+  padding: 10px 18px;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  color: white;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.btn:hover {
+  opacity: 0.9;
+  transform: scale(1.05);
+}
+
+/* Button colors */
+.plus {
+  background-color: #22c55e;
+}
+
+.minus {
+  background-color: #ef4444;
+}
+
+.reset {
+  background-color: #3b82f6;
+}
+
+.toggle {
+  background-color: #6366f1;
+  margin-top: 10px;
+}
+
+.theme-btn {
+  background-color: #000;
+  color: #fff;
+}
+
+/* Input */
+.input-box {
+  padding: 8px 12px;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+/* Text */
+.profile {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.theme-text {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+/* Divider */
+hr {
+  margin: 25px 0;
+}
