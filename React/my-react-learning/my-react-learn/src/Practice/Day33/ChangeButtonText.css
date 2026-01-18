@@ -1,0 +1,18 @@
+.btn-text-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.btn-text-container button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #6366f1;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.btn-text-container button:hover {
+  background-color: #4f46e5;
+}
