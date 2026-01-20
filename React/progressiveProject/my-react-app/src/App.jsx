@@ -2,7 +2,7 @@ import "./App.css";
 import User from "./User";
 import Button from "./Button";
 import Layout from "./Layout";
-import Child from "./Child";
+import Child from "./child";
 
 function App() {
   const msg = "Welcome to my App";

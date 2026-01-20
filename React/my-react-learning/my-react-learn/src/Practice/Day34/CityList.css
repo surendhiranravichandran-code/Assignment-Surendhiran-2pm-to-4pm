@@ -1,0 +1,27 @@
+.city-container {
+  width: 300px;
+  margin: 80px auto;
+  padding: 20px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-family: Arial, sans-serif;
+}
+
+.city-container h2 {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.city-list {
+  list-style: none;
+  padding: 0;
+}
+
+.city-list li {
+  padding: 10px;
+  margin-bottom: 8px;
+  background-color: #0ac5cf;
+  color:rgb(15, 15, 15);
+  border-radius: 5px;
+  text-align: center;
+}
