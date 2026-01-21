@@ -1,0 +1,19 @@
+.container {
+  width: 400px;
+  margin: 15px auto;
+  padding: 15px;
+  background: #fff;
+  border-radius: 8px;
+}
+
+.product-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 6px;
+  border-bottom: 1px solid #ddd;
+}
+
+.price {
+  color: green;
+  font-weight: bold;
+}
