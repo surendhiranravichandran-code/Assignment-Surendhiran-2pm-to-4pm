@@ -4,6 +4,7 @@ import Footer from "./Footer";
 
 function Layout({ children }) {
   const [dark, setDark] = useState(false);
+  const role = "admin"; // change to "user" to test
 
   return (
     <div
@@ -14,9 +15,7 @@ function Layout({ children }) {
         padding: "20px",
         display: "flex",
         flexDirection: "column",
-        alignContent: "center",
-        justifyContent: "center",
-         alignItems: "center"
+        alignItems: "center"
       }}
     >
       <Header />
@@ -25,7 +24,9 @@ function Layout({ children }) {
         Toggle {dark ? "Light" : "Dark"}
       </button>
 
-      <hr />
+      <h3>{role === "admin" ? "Admin Dashboard" : "User Dashboard"}</h3>
+
+      <hr style={{ width: "100%" }} />
 
       {children}
 
