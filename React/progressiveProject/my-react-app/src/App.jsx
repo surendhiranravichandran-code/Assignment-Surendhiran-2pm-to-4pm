@@ -1,8 +1,10 @@
-import "./App.css";
-import User from "./User";
-import Button from "./Button";
-import Layout from "./Layout";
-import Child from "./Child";
+import "./Components/styles/App.css";
+
+import User from "./Components/User";
+import Child from "./Components/Child";
+import Button from "./Components/Buttons/Button";
+import Layout from "./Components/Layouts/Layout";
+import Home from "./Components/Pages/Home";
 
 function App() {
   return (
@@ -22,6 +24,9 @@ function App() {
         <Button className="primary" text="Login" />
         <Button className="secondary" text="SignUp" />
       </div>
+
+      {/* Example of Home Page usage */}
+      <Home />
     </Layout>
   );
 }

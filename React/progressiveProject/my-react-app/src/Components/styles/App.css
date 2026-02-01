@@ -1,22 +1,14 @@
-body {
-  margin: 0;
-  font-family: system-ui, sans-serif;
-}
-
-/* Center everything */
 .container {
   max-width: 500px;
   margin: 60px auto;
   text-align: center;
 }
 
-/* Headings */
 .title {
   font-size: 42px;
   margin: 30px 0;
 }
 
-/* Buttons spacing */
 .actions {
   display: flex;
   justify-content: center;
@@ -24,14 +16,14 @@ body {
   margin-top: 20px;
 }
 
-/* Toggle + profile buttons */
 .toggle-btn,
 .profile-btn {
   margin: 20px 0;
   padding: 10px 22px;
   border-radius: 8px;
   border: none;
-  background: #facc15;
+  background: var(--secondary-color);
   font-size: 16px;
   cursor: pointer;
+  font-weight: bold;
 }

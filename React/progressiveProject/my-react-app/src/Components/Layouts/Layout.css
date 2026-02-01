@@ -1,0 +1,40 @@
+.layout {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: var(--spacing);
+  box-sizing: border-box;
+}
+
+.layout.light {
+  background-color: var(--bg-light);
+  color: var(--text-dark);
+}
+
+.layout.dark {
+  background-color: var(--bg-dark);
+  color: var(--text-light);
+}
+
+.toggle-btn {
+  background-color: var(--secondary-color);
+  color: #000;
+  padding: 10px 20px;
+  border-radius: var(--border-radius);
+  font-weight: bold;
+  margin-bottom: var(--spacing);
+  margin-right: 10px;
+}
+
+.layout.dark .toggle-btn {
+  background-color: #333;
+  color: #fff;
+}
+
+main {
+  margin-top: var(--spacing);
+  padding: var(--spacing);
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}

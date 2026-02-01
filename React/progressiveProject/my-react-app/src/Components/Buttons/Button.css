@@ -1,0 +1,27 @@
+.btn {
+  padding: 12px 26px;
+  font-size: 16px;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Primary */
+.primary {
+  background: var(--primary-color);
+  color: #fff;
+}
+.primary:hover {
+  background: #1d4ed8;
+}
+
+/* Secondary */
+.secondary {
+  background: transparent;
+  border: 2px solid var(--primary-color);
+  color: var(--primary-color);
+}
+.secondary:hover {
+  background: var(--primary-color);
+  color: #fff;
+}
