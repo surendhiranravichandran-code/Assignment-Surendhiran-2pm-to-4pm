@@ -1,0 +1,25 @@
+Explain Effect Execution Order
+==================================
+React executes effects in this order:
+======================================
+ On First Render:
+-----------------
+Component renders
+
+DOM updates
+
+useEffect runs
+
+ On State Update:
+-----------------
+Component re-renders
+
+DOM updates
+
+Cleanup runs (if exists)
+
+Effect runs again
+
+On Unmount:
+-----------
+Cleanup function runs

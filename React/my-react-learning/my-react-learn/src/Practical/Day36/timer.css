@@ -1,0 +1,19 @@
+.container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to right, #f6c23e, #e74a3b);
+}
+
+.card {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.number {
+  font-size: 40px;
+  color: #e74a3b;
+}
